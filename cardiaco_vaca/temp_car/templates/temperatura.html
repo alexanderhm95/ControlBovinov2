@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Data List</title>
+</head>
+<body>
+    <h1>Temperature Data List</h1>
+    <ul>
+        {% for data in TemperaturaListView %}
+            <li>Temperature: {{ data.temperature }} °C - Timestamp: {{ data.timestamp }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

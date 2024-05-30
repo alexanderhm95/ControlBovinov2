@@ -1,0 +1,36 @@
+<!-- pulsaciones_list.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pulsaciones</title>
+    <script src="{% static 'vendor/chart.js/Chart.min.js' %}"></script>
+</head>
+<body>
+    <h1>Pulsaciones</h1>
+    <canvas id="myChart" width="400" height="200"></canvas>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var data = {
+            labels: {% for pulsacion in pulsaciones %}"{{ forloop.counter }}"{% if not forloop.last %},{% endif %}{% endfor %},
+            datasets: [{
+                label: 'Pulsaciones por minuto',
+                data: {% for pulsacion in pulsaciones %}{{ pulsacion }}{% if not forloop.last %},{% endif %}{% endfor %},
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        };
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: data,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

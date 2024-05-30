@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% load widget_tweaks %}
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Login</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/quill/quill.snow.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/quill/quill.bubble.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/simple-datatables/style.css' %}" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+    .alert-container {
+      position: fixed;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      width: 80%;
+      max-width: 400px;
+    }
+    body {
+      margin: 0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #7cbeff1c, #ffffff);
+      animation: water 4s infinite alternate;
+    }
+    @keyframes water {
+      0% {
+        background-position: 0% 0%;
+      }
+      100% {
+        background-position: 100% 100%;
+      }
+    }
+    .curve {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #ffffff;
+      clip-path: ellipse(50% 30% at 50% 0);
+      z-index: -1;
+    }
+    .reflections {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+      animation: reflections 4s infinite alternate;
+    }
+    @keyframes reflections {
+      0% {
+        background-position: 0% 0%;
+      }
+      100% {
+        background-position: 100% 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="curve"></div>
+  <div class="reflections"></div>
+  <main>
+    <div class="container">
+      <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-5 col-md-8 d-flex flex-column align-items-center justify-content-center">
+              <div class="card mb-5 border shadow-lg">
+                <div class="card-title">
+                  <div class="d-flex justify-content-center py-4 px-5">
+                    <a href="index.html" class="logo d-flex align-items-center w-auto">
+                      <img src="{% static 'assets/img/logounl.png' %}" alt="" height="110" width="350">
+                    </a>
+                  </div><!-- End Logo -->
+                </div>
+                <div class="card-body">
+                  <div>
+                    <h5 class="card-title text-center pb-0 fs-4">Iniciar Sesión</h5>
+                  </div>
+                  {% if messages %}
+                  <div id="alert-container" class="alert-container" style="display: none;">
+                    <div class="alert alert-danger" role="alert">
+                      {% for message in messages %}
+                      {{ message }}
+                      {% endfor %}
+                    </div>
+                  </div>
+                  <script>
+                    // Mostrar la alerta flotante cuando hay mensajes
+                    window.onload = function() {
+                      mostrarAlerta();
+                    };
+                  </script>
+                  {% endif %}
+                  <form action="" method="POST" class="row g-3 needs-validation" novalidate>
+                    {% csrf_token %}
+                    <div class="form-group mb-2">
+                      <label for="username">Usuario</label>
+                      <input type="text" class="form-control" id="username" name="username" required>
+                      <div class="invalid-feedback">
+                        Por favor ingrese su usuario.
+                      </div>
+                    </div>
+                    <div class="form-group mb-2">
+                      <label for="password">Contraseña</label>
+                      <input type="password" class="form-control" id="password" name="password" required>
+                      <div class="form-check d-flex justify-content-between align-items-center mt-2">
+                        
+                        <label class="form-check-label text-muted fs-6 mb-0" for="show-password"><input class="form-check-input" type="checkbox" id="show-password" onclick="togglePassword()">Mostrar contraseña</label>
+                      </div>
+                      <div class="invalid-feedback">
+                        Por favor ingrese su contraseña.
+                      </div>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Ingresar</button>
+                    <div class="text-center">
+                      
+                      <a href="{% url 'password_reset' %}">¿Olvidaste tu contraseña?</a>
+                      <p>No tienes cuenta? <a href="{% url 'crear_usuario' %}">Regístrate</a></p>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main><!-- End #main -->
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/apexcharts/apexcharts.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/chart.js/chart.umd.js' %}"></script>
+  <script src="{% static 'assets/vendor/echarts/echarts.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/quill/quill.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/simple-datatables/simple-datatables.js' %}"></script>
+  <script src="{% static 'assets/vendor/tinymce/tinymce.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+  <script>
+    // Función para mostrar la alerta flotante
+    function mostrarAlerta() {
+      var alertContainer = document.getElementById('alert-container');
+      alertContainer.style.display = 'block';
+      setTimeout(function() {
+        alertContainer.style.display = 'none';
+      }, 5000);
+    }
+    // Función para mostrar/ocultar la contraseña
+    function togglePassword() {
+      var passwordField = document.getElementById('password');
+      var showPasswordCheckbox = document.getElementById('show-password');
+      if (showPasswordCheckbox.checked) {
+        passwordField.type = 'text';
+      } else {
+        passwordField.type = 'password';
+      }
+    }
+  </script>
+</body>
+</html>

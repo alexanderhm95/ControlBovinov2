@@ -1,0 +1,120 @@
+<!-- lista_usuarios.html -->
+<!DOCTYPE html>
+{% extends 'admin_1/base.html' %}
+{% load static %}
+{% block contenido %}
+<html>
+    <style>
+       body {
+  background: linear-gradient(135deg, #7cbeff1c, #ffffff);
+  animation: water 4s infinite alternate;
+}
+
+@keyframes water {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+
+        #tablaContainer {
+            margin: auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 80%;
+            max-width: 800px;
+            margin-top: 20px;
+        }
+
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        h2 {
+            text-align: center;
+            color: white;
+            background-color: rgb(255, 251, 4);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            margin: 0;
+        }
+
+        button {
+            background-color: red;
+            color: white;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="text-center mb-4">Desactivar Cuentas Inactivas</h2>
+    </div>
+    <div class="container" id="tablaContainer">
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th>Usuario</th>
+                    <th>Nombre y Apellido</th>
+                    <th>Correo</th>
+                    <th>Estado</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for usuario in usuarios %}
+                    <tr>
+                        <td>{{ usuario.username }}</td>                            
+                        <td>{{ usuario.first_name }} {{ usuario.last_name }}</td>
+                        <td>{{ usuario.email }}</td>
+                        <td>
+                            {% if usuario.is_active %}
+                                <span class="badge text-bg-success">Activo</span>
+                            {% else %}
+                                <span class="badge text-bg-danger">Inactivo</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            <form method="post" action="{% url 'lista_usuarios' %}">
+                                {% csrf_token %}
+                                <input type="hidden" name="user_id" value="{{ usuario.id }}">
+                                <button type="submit" class="btn btn-danger">
+                                    {% if usuario.is_active %}
+                                        Desactivar
+                                    {% else %}
+                                        Activar
+                                    {% endif %}
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+{% endblock %}
+</html>

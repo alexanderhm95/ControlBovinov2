@@ -1,0 +1,108 @@
+<!-- eliminar_usuario.html -->
+<!DOCTYPE html>
+{% extends 'admin_1/base.html' %}
+{% load static %}
+{% block contenido %}
+<html>
+<head>
+    <title>Eliminar Usuario</title>
+    <!-- Add Bootstrap CSS reference -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZwT" crossorigin="anonymous">
+</head>
+<style>
+    body {
+        background: linear-gradient(135deg, #7cbeff1c, #ffffff);
+        animation: water 4s infinite alternate;
+    }
+
+    @keyframes water {
+        0% {
+            background-position: 0% 0%;
+        }
+        100% {
+            background-position: 100% 100%;
+        }
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 80vh;
+    }
+
+    .formulario-container {
+        max-width: 500px;
+        width: 100%;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .mi-formulario {
+        max-width: 500px;
+        text-align: center;
+        margin: 0 auto;
+        background-color: rgb(255, 255, 255);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .mi-boton {
+        text-align: center;
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .mi-boton:hover {
+        background-color: #0056b3;
+    }
+
+    .campo-formulario {
+        margin-bottom: 15px;
+    }
+
+    /* Estilos adicionales según tus preferencias */
+    label {
+        display: flex;
+        align-content: center;
+        font-weight: bold;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+
+    h2 {
+        text-align: center;
+        color: #3e3e3f;
+    }
+</style>
+<body>
+    <div class="container mt-5">
+        <div class="formulario-container">
+            <h2>Eliminar Usuario</h2>
+            <p>¿Estás seguro de que deseas eliminar al usuario "{{ user.username }}"?</p>
+            <form method="post" action="">
+                {% csrf_token %}
+                <div class="text-center">
+                    <button type="submit" class="mi-boton">Sí, eliminar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Add Bootstrap JS and jQuery (required for certain Bootstrap components) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+{% endblock %}
+</html>

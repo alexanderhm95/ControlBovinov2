@@ -1,0 +1,105 @@
+<!-- listar_usuarios_2.html -->
+<!DOCTYPE html>
+{% extends 'admin_1/base.html' %}
+{% load static %}
+{% block contenido %}
+<html>
+    <style>
+      body {
+  background: linear-gradient(135deg, #7cbeff1c, #ffffff);
+  animation: water 4s infinite alternate;
+}
+
+@keyframes water {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+        #tablaContainer {
+              margin: auto;
+              background-color: #ffffff;
+              border-radius: 10px;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+              padding: 20px;
+              width: 80%;
+              max-width: 800px;
+          }
+    
+          table {
+              margin: auto;
+              border-collapse: collapse;
+              width: 100%;
+          }
+    
+          th, td {
+              border: 1px solid #ddd;
+              padding: 8px;
+              text-align: center;
+          }
+    
+          th {
+              background-color: #f2f2f2;
+          }
+            .container {
+            text-align: center; /* Alinea el texto al centro */
+            }
+            h2 {
+            text-align: center;
+            color: white;
+            background-color: rgb(0, 2, 121);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block; /* Hace que el contenedor sea del tamaño del texto */
+            margin: 0; /* Elimina el margen predeterminado del h1 */
+            }
+    
+        </style>
+<head>
+    <title>Listar Usuarios 2</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Gestionar Usuarios</h2>
+    </div>
+        <div id="tablaContainer">
+            <table id="tablaReportes">
+                <thead>
+                    <tr>
+                        <th>Usuario</th>
+                        <th>Nombre y Apellido</th>
+                        <th>Correo</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for usuario in usuarios %}
+                        <tr>
+                            <td>{{ usuario.username }}</td>
+                            <td>{{ usuario.first_name }} {{ usuario.last_name }}</td>
+                            <td>{{ usuario.email }}</td>
+                            <td>
+                                {% if usuario.is_active %}
+                                <span class="badge text-bg-success">Activo</span>
+                                {% else %}
+                                <span class="badge text-bg-danger">Inactivo</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                <a href="{% url 'editar_usuario2' user_id=usuario.id %}"><img src="{% static 'assets/img/editar/editar.png' %}" width="40" height="40"></a> |
+                                <a href="{% url 'eliminar_usuario' user_id=usuario.id %}"><img src="{% static 'assets/img/editar/borrar.png' %}" width="40" height="40"></a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+</body>
+{% endblock %}
+
+</html>

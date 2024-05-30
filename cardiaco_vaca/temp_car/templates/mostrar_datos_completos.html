@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mostrar Datos</title>
+    <style>
+        /* Estilos CSS para el reloj */
+        .reloj {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Datos del Sensor</h1>
+    <div class="reloj" id="relojDatos">Cargando...</div>
+
+    <script>
+        // JavaScript para actualizar los datos en tiempo real en forma de reloj
+        function actualizarDatos() {
+    fetch('/api/datos2/') // Cambia esta URL por la ruta correcta a tu API que devuelve los datos del sensor
+        .then(response => response.json())
+        .then(data => {
+            const relojDatos = document.getElementById('relojDatos');
+            if (data.temperatura && data.humedad && data.pulsaciones) {
+                const temperatura = data.temperatura;
+                const humedad = data.humedad;
+                const pulsaciones = data.pulsaciones;
+
+                const fecha = new Date();
+                const fechaFormateada = `${fecha.getHours()}:${('0' + fecha.getMinutes()).slice(-2)}:${('0' + fecha.getSeconds()).slice(-2)}`;
+
+                relojDatos.textContent = `Temperatura: ${temperatura}°C, Humedad: ${humedad}%, Pulsaciones: ${pulsaciones} ppm, Fecha: ${fechaFormateada}`;
+            } else {
+                relojDatos.textContent = 'No hay datos disponibles';
+            }
+        })
+        .catch(error => console.error('Error al obtener los datos:', error));
+}
+
+        // Actualizar cada 5 segundos
+        setInterval(actualizarDatos, 500);
+    </script>
+</body>
+</html>
