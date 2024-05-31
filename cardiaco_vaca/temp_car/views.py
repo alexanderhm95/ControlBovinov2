@@ -18,6 +18,9 @@ from .models import MedicionCompleto
 from io import BytesIO
 from .models import PersonalInfo
 from django.contrib.auth import get_user_model,login,logout,authenticate, login
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
 from temp_car.utils.loginCheck import es_Admin, usuario_en_staff 
 
 ####################################
@@ -153,18 +156,17 @@ def editar_usuario(request, user_id):
 #Metodos de la plataforma movil
 ##########################################
 
-def user_login2(request):
-    if request.method == 'POST':
-        username = request.POST.get('username')
-        password = request.POST.get('password')
-        # Autenticar al usuario
+class LoginView1(APIView):
+    @csrf_exempt
+    def post(self, request, *args, **kwargs):
+        username = request.data.get('username')
+        password = request.data.get('password')
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return JsonResponse({'message': 'Inicio de sesión exitoso.'}, status=200)
+            return Response({'detail': 'Authentication successful'}, status=status.HTTP_200_OK)
         else:
-            return JsonResponse({'error': 'Credenciales inválidas. Inténtalo de nuevo.'}, status=400)
-    return JsonResponse({'error': 'Intento de inicio de sesión inválido.'}, status=405)
+            return Response({'detail': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
 
 def apiRegister(request):
     if request.method == 'POST':

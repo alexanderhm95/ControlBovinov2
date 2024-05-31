@@ -46,7 +46,7 @@ urlpatterns = [
     ######################################
     #Rutas de Plataforma Movil  
     ######################################
-    path('api/login/', user_login2, name='login2'),
+    path('api/login/', LoginView1.as_view(), name='api-login'),
     path('api/register',apiRegister, name='registrar2'),
     path('api/listar',apiList, name='listar2'),
     path('api/editar',apiEdit, name='listar2'),
