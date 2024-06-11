@@ -19,6 +19,9 @@ from .models import *
 ####################################
 #Metodos de plataforma web       
 ####################################
+def error_404_view(request, exception):
+    return render(request, '404.html', status=404)
+
 def user_login(request):
     if request.method == 'POST':
         username = request.POST.get('username')
