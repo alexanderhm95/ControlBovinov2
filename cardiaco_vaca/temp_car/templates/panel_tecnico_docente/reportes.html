@@ -174,11 +174,11 @@
     <tbody>
       {% for reporte in reportes %}
       <tr>
-        <td>{{ reporte.collar_id }}</td>
-        <td>{{ reporte.nombre_vaca }}</td>
-        <td>{{ reporte.fecha_creacion }}</td>
-        <td>{{ reporte.temperatura }}</td>
-        <td>{{ reporte.pulsaciones }}</td>
+        <td>{{ reporte.id_Bovino.idCollar }}</td>
+        <td>{{ reporte.id_Bovino.nombre }}</td>
+        <td>{{ reporte.fecha_lectura|date:"d-m-Y" }}</td>
+        <td>{{ reporte.id_Temperatura.valor }}</td>
+        <td>{{ reporte.id_Pulsaciones.valor }}</td>
       </tr>
       {% endfor %}
     </tbody>

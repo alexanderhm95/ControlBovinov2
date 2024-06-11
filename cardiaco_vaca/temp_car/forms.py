@@ -30,6 +30,18 @@ class PersonalInfoForm(forms.ModelForm):
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'input'
 
+class EditPersonalInfoForm(forms.ModelForm):
+    class Meta:
+        model = PersonalInfo
+        fields = ['cedula', 'telefono', 'nombre', 'apellido', 'email']
+
+class EditUserForm(forms.ModelForm):
+    is_staff = forms.BooleanField(required=False)
+
+    class Meta:
+        model = User
+        fields = ['is_staff']
+
 
 class CustomPasswordResetForm(PasswordResetForm):
     def clean_email(self):

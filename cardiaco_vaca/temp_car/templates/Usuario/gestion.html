@@ -14,36 +14,45 @@
         <table class="table table-bordered">
           <thead class="table-dark">
             <tr>
-              <th>ID</th>
               <th>Nombres</th>
               <th>Email</th>
               <th>Cédula</th>
               <th>Teléfono</th>
+              <th>Administrador</th>
               <th>Acciones</th>
             </tr>
           </thead>
           <tbody>
             {% for usuario in usuarios.values %}
             <tr>
-              <td>{{ usuario.id }}</td>
               <td>{{ usuario.nombre }} {{ usuario.apellido }}</td>
               <td>{{ usuario.email }}</td>
               <td>{{ usuario.cedula }}</td>
-              <td>{{ usuario.telefono }}</td>
+              <td>{{ usuario.telefono }}</td> 
+              <td class="text-center">
+                {% if usuario.is_staff %}
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: green; display: inline-block;"></div>
+                {% else %}
+                    <span style="width: 20px; height: 20px; border-radius: 50%; background-color: red; display: inline-block;"></div>
+                {% endif %}
+            </td>
               <td class="d-flex justify-content-center">
-                <a
-                  href="{% url 'editar_usuario' usuario.id %}"
-                  class="btn btn-warning mx-2"
-                  style="width:100px"
-                  >Editar</a
-                >
-                {% if usuario.activo %}
-                <a href="{% url 'desactivar' usuario.userId %}" class="btn btn-danger mx-2" style="width:100px">Desactivar</a>
-            {% else %}
-                <a href="{% url 'desactivar' usuario.userId %}" class="btn btn-success mx-2" style="width:100px">Activar</a>
-            {% endif %}
-
+                  <!-- Mostrar botón de editar solo si 'id' está presente -->
+                  {% if usuario.id %}
+                  <a href="{% url 'editar_usuario' usuario.userId %}" class="btn btn-warning mx-2" style="width:100px">Editar</a>
+              {% endif %}
+              <!-- Mostrar botón de activar/desactivar según 'activo' -->
+              {% if usuario.userId %}
+                  {% if usuario.activo %}
+                      <a href="{% url 'changeState' usuario.userId %}" class="btn btn-danger mx-2" style="width:100px">Desactivar</a>
+                  {% else %}
+                      <a href="{% url 'changeState' usuario.userId %}" class="btn btn-success mx-2" style="width:100px">Activar</a>
+                  {% endif %}
+              {% endif %}
+               
               </td>
+            
+            
             </tr>
             {% endfor %}
           </tbody>

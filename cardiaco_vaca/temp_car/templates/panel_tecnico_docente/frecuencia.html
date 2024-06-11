@@ -138,16 +138,16 @@
       <tbody>
           {% for reporte in reportes %}
               <tr>
-                  <td>{{ reporte.collar_id }}</td>
-                  <td>{{ reporte.nombre_vaca }}</td>
-                  <td>{{ reporte.fecha_creacion }}</td>
-                  <td>{{ reporte.pulsaciones }}</td>
+                <td>{{ reporte.id_Bovino.idCollar }}</td>
+                <td>{{ reporte.id_Bovino.nombre }}</td>
+                <td>{{ reporte.fecha_lectura|date:"d-m-Y" }} </td>
+                  <td>{{ reporte.id_Pulsaciones.valor }}</td>
               </tr>
           {% endfor %}
       </tbody>
   </table>
 </div>
-<div style="margin-top: 10px;">
+<div style="margin-top: 15px;">
       <!-- Agregar la paginación -->
   <!-- Paginación centrada y con estilo de Bootstrap -->
   <nav aria-label="Page navigation">
@@ -181,7 +181,7 @@
 <script>
   // Realiza una solicitud AJAX para obtener datos de la API
   $.ajax({
-    url: '/api/datos3/',  // Reemplaza con la URL correcta de tu API
+    url: '/monitor/datos',  // Reemplaza con la URL correcta de tu API
     method: 'GET',
     success: function(response) {
       // Filtra los últimos 10 reportes

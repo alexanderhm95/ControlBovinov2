@@ -1,27 +1,10 @@
 # En temperature_app/models.py
-from django.contrib.auth.models import BaseUserManager
+
+from django.contrib.auth.models import User
 from django.db import models
+from .utils import getHours
 
-class CustomUserManager(BaseUserManager):
-    def create_user(self, email, password=None, **extra_fields):
-        if not email:
-            raise ValueError(_('El correo es obligatorio'))
-        email = self.normalize_email(email)
-        user = self.model(email=email, **extra_fields)
-        user.set_password(password)
-        user.save(using=self._db)
-        return user
 
-    def create_superuser(self, email, password=None, **extra_fields):
-        extra_fields.setdefault('is_staff', True)
-        extra_fields.setdefault('is_superuser', True)
-
-        if extra_fields.get('is_staff') is not True:
-            raise ValueError(_('Superuser must have is_staff=True.'))
-        if extra_fields.get('is_superuser') is not True:
-            raise ValueError(_('Superuser must have is_superuser=True.'))
-
-        return self.create_user(email, password, **extra_fields)
 
 class PersonalInfo(models.Model):
     cedula = models.CharField(max_length=15, blank=True, null=True, unique=True)
@@ -33,36 +16,41 @@ class PersonalInfo(models.Model):
     def __str__(self):
         return f"{self.nombre} {self.apellido}"
 
-    
 
-class TemperatureData(models.Model):
-    temperature = models.FloatField()
-    timestamp = models.DateTimeField(auto_now_add=True)
-    
-    def __str__(self):
-        return f"Temperature: {self.temperature} °C - Timestamp: {self.timestamp}"
-    
-class Pulsacion(models.Model):
-    fecha = models.DateTimeField(auto_now_add=True)
-    pulsaciones_por_minuto = models.IntegerField()
+
+class Temperatura(models.Model):
+    id_Temperatura = models.AutoField(primary_key=True)
+    valor = models.IntegerField()
 
     def __str__(self):
-        return f'{self.fecha} - {self.pulsaciones_por_minuto} bpm'
+        return str(self.valor)
 
-class Medicion(models.Model):
-    humedad = models.FloatField()
-    temperatura = models.FloatField()
-    fecha_hora = models.DateTimeField(auto_now_add=True)
+class Pulsaciones(models.Model):
+    id_Pulsaciones = models.AutoField(primary_key=True)
+    valor = models.IntegerField()
 
     def __str__(self):
-        return f"Medicion: Humedad={self.humedad}%, Temperatura={self.temperatura}°C"
+        return str(self.valor)
+
+class Bovinos(models.Model):
+    id_Bovinos = models.AutoField(primary_key=True)
+    idCollar = models.IntegerField(unique=True)
+    macCollar = models.CharField(max_length=100, blank=True, null=True, unique=True)
+    nombre = models.CharField(max_length=100)
+    fecha_registro = models.DateField()
+    def __str__(self):
+        return self.nombre
     
-class MedicionCompleto(models.Model):
-    temperatura = models.FloatField()
-    pulsaciones = models.IntegerField()
-    fecha_creacion = models.DateTimeField(auto_now_add=True)
-    collar_id = models.CharField(max_length=5000)  # Agrega la variable 'collar_id'
-    nombre_vaca = models.CharField(max_length=100)
+class Lectura(models.Model):
+    id_Lectura = models.AutoField(primary_key=True)
+    id_Temperatura = models.ForeignKey(Temperatura, on_delete=models.CASCADE)
+    id_Pulsaciones = models.ForeignKey(Pulsaciones, on_delete=models.CASCADE)
+    fecha_lectura = models.DateField(default=getHours.getDate)
+    hora_lectura = models.TimeField(default=getHours.getTime)
+    id_Bovino = models.ForeignKey(Bovinos, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"ID: {self.id}, Nombre: {self.nombre_vaca}, Temperatura: {self.temperatura}, Pulsaciones: {self.pulsaciones}, Collar ID: {self.collar_id}, Fecha: {self.fecha_creacion}"
+        return f"{self.id_Lectura} - {self.id_Bovino.nombre} - {self.fecha_lectura} - {self.hora_lectura}"
+
+
+

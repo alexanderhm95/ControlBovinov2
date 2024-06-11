@@ -125,39 +125,40 @@
 <section class="container1" style="align-items: center;">
     <div class="square">
         <!-- Contenedor blanco alrededor de la gráfica -->
-        <div
-            style="background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-            <!-- Contenedor para la gráfica -->
-            <canvas id="temperaturaHumedadChart" width="400" height="150"></canvas>
+        <div style="background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+        {% include "./component/_graficas.html" with chart_id="temperaturaHumedadChart" width="500" height="180"%}
         </div>
     </div>
 </section>
 
 <div id="tablaContainer">
-    <h2 style="color: black; text-align: center;">Tabla de Temperaturas</h2>
+    <h2 style="color: black; text-align: center;">Tabla de Frecuencias Cardiacas</h2>
     <table id="tablaReportes">
         <thead>
             <tr>
                 <th>Collar</th>
                 <th>Nombre</th>
-                <th>Fecha de Creación</th>
+                <th>Fecha de Lectura</th>
                 <th>Temperatura</th>
             </tr>
         </thead>
         <tbody>
             {% for reporte in reportes %}
             <tr>
-                <td>{{ reporte.collar_id }}</td>
-                <td>{{ reporte.nombre_vaca }}</td>
-                <td>{{ reporte.fecha_creacion }}</td>
-                <td>{{ reporte.temperatura }}</td>
+                <td>{{ reporte.id_Bovino.idCollar }}</td>
+                <td>{{ reporte.id_Bovino.nombre }}</td>
+                <td>{{ reporte.fecha_lectura|date:"d-m-Y" }} </td>
+                <td>{{ reporte.id_Temperatura.valor }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6" class="text-center">No hay reportes disponibles.</td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
 </div>
 <div style="margin-top: 15px;">
-    <!-- Agregar la paginación -->
     <!-- Paginación centrada y con estilo de Bootstrap -->
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
@@ -169,13 +170,11 @@
                 <a class="page-link" href="?page={{ reportes.previous_page_number }}">Anterior</a>
             </li>
             {% endif %}
-
             <li class="page-item disabled">
                 <span class="page-link">
                     Página {{ reportes.number }} de {{ reportes.paginator.num_pages }}.
                 </span>
             </li>
-
             {% if reportes.has_next %}
             <li class="page-item">
                 <a class="page-link" href="?page={{ reportes.next_page_number }}">Próximo</a>
@@ -188,65 +187,14 @@
     </nav>
 </div>
 
-<script>
-    // Realiza una solicitud AJAX para obtener datos de la API
-    $.ajax({
-        url: '/api/datos3/',  // Reemplaza con la URL correcta de tu API
-        method: 'GET',
-        success: function (response) {
-            // Filtra los últimos 10 reportes
-            var ultimosReportes = response.reportes.slice(-40);
 
-            // Extrae las etiquetas y datos de temperatura de los últimos 10 reportes
-            var fechas = ultimosReportes.map(function (report) {
-                return report.fecha_creacion;
-            });
-            var temperaturas = ultimosReportes.map(function (report) {
-                return report.temperatura;
-            });
-
-            // Utiliza los datos de los últimos 10 reportes para actualizar la gráfica
-            var datosTemperaturaHumedad = {
-                labels: fechas,
-                datasets: [
-                    {
-                        label: 'Temperatura (°C)',
-                        backgroundColor: 'rgba(255, 237, 0, 0.53)',
-                        borderColor: 'rgba(255, 237, 0, 0.53)',
-                        borderWidth: 1,
-                        data: temperaturas
-                    }
-                ]
-            };
-
-            // Configuración de la gráfica
-            var opcionesTemperaturaHumedad = {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            };
-
-            // Obtén el contexto del lienzo de la gráfica
-            var ctx = document.getElementById('temperaturaHumedadChart').getContext('2d');
-
-            // Crea la gráfica de línea
-            var myChart = new Chart(ctx, {
-                type: 'line',
-                data: datosTemperaturaHumedad,
-                options: opcionesTemperaturaHumedad
-            });
-        },
-        error: function (error) {
-            console.error('Error al obtener datos de la API:', error);
-        }
-    });
-</script>
 
 <div style="text-align: center; margin-top: 10px;">
     <footer>
         <p>&copy;All rights reserved <br> Carrera de Ingeniería en Computacion.</p>
     </footer>
 </div>
+
+
+<script src="{% static 'components/graficas.js' %}" defer></script>
 {% endblock %}
