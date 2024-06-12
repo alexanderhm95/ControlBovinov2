@@ -15,6 +15,8 @@ from xhtml2pdf import pisa
 from io import BytesIO
 from .forms import *
 from .models import *
+import json
+import urllib.parse
 
 ####################################
 #Metodos de plataforma web       
@@ -470,13 +472,15 @@ def apiEdit(request, user_id):
 ##########################################
 @csrf_exempt  # Esto es para deshabilitar la protección CSRF en esta vista (deberías tomar medidas de seguridad apropiadas en un entorno de producción)
 def lecturaDatosArduino(request):
-    print(request)
+    body_unicode = request.body.decode('utf-8')
+    lecturaDecoded = json.loads(body_unicode)
+    
     if request.method == 'POST':
-        collar_id = request.POST.get('collar_id')
-        nombre_vaca = request.POST.get('nombre_vaca')
-        mac_collar = request.POST.get('mac_collar')
-        temperatura = request.POST.get('temperatura')
-        pulsaciones = request.POST.get('pulsaciones')
+        collar_id = lecturaDecoded.get('collar_id', None)
+        nombre_vaca = lecturaDecoded.get('nombre_vaca', None)
+        mac_collar = lecturaDecoded.get('mac_collar', None)
+        temperatura = lecturaDecoded.get('temperatura', None)
+        pulsaciones = lecturaDecoded.get('pulsaciones', None)
 
         if collar_id and nombre_vaca and mac_collar and temperatura and pulsaciones:
             #Primero verifica si el collar y la mac del collar ya existen en la base de datos
