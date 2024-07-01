@@ -30,6 +30,9 @@ ALLOWED_HOSTS = ['*']
 LOGIN_REDIRECT_URL = ('dashboard_redirect')
 LOGOUT_REDIRECT_URL = ('login')
 
+
+SESSION_COOKIE_AGE = 1800  # Duración de la sesión en segundos (media hora)
+
 #handler404 = 'temp_car.views.error_404_view'
 
 CORS_ALLOW_ALL_ORIGINS = True
@@ -83,7 +86,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware'
+    'django.middleware.common.CommonMiddleware',
+    'temp_car.middleware.NotFound.NotFoundMiddleware',
+    'temp_car.middleware.SessionTimeout.SessionTimeoutMiddleware',
 ]
 
 ROOT_URLCONF = 'cardiaco_vaca.urls'
@@ -92,7 +97,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'temp_car/templates'),
+            os.path.join(BASE_DIR, 'temp_car/templates'),  # Añade esta línea
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -105,6 +110,9 @@ TEMPLATES = [
         },
     },
 ]
+
+
+
 
 WSGI_APPLICATION = 'cardiaco_vaca.wsgi.application'
 

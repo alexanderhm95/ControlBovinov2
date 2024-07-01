@@ -112,7 +112,7 @@ def ultimoRegistro(request, collar_id):
         return JsonResponse(reporte, status=200)
     else:
         return JsonResponse({'error': 'No hay datos disponibles para el collar_id proporcionado'})
-
+@login_required
 def reportes(request):
     # Obtener la página actual de la URL, por ejemplo, "/reportes/?page=2"
     page = request.GET.get('page', 1)
