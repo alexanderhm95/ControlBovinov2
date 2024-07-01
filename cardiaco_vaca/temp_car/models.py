@@ -54,3 +54,12 @@ class Lectura(models.Model):
 
 
 
+class ControlMonitoreo(models.Model):
+    id_Control = models.AutoField(primary_key=True)
+    id_Lectura = models.ForeignKey(Lectura, on_delete=models.CASCADE)
+    id_User = models.ForeignKey(User, on_delete=models.CASCADE)
+    fecha_lectura = models.DateField(default=getHours.getDate)
+    hora_lectura = models.TimeField(default=getHours.getTime)
+
+    def __str__(self):
+        return f"{self.id_Control} - {self.id_Lectura.id_Bovino.nombre} - {self.fecha_lectura} - {self.hora_lectura}"

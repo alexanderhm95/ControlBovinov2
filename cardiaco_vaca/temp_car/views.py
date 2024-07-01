@@ -4,6 +4,8 @@ from django.contrib.auth import get_user_model,login,logout,authenticate, login
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+
+from datetime import datetime, timedelta
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, JsonResponse
 from django.template.loader import get_template
@@ -13,167 +15,78 @@ from rest_framework.response import Response
 from rest_framework import status
 from xhtml2pdf import pisa
 from io import BytesIO
-from .forms import *
 from .models import *
+from .forms import *
+import random
 import json
 import urllib.parse
+from datetime import time
 
 ####################################
 #Metodos de plataforma web       
 ####################################
+
+def prueba(request):
+    return render(request, 'appMonitor/dashboard/temperature.html')
+
 def error_404_view(request, exception):
     return render(request, '404.html', status=404)
-
-def user_login(request):
-    if request.method == 'POST':
-        username = request.POST.get('username')
-        password = request.POST.get('password')
-        # Autenticar al usuario
-        user = authenticate(request, username=username, password=password)
-        if user is not None:
-            #verificar si el usuario es admin y esta en el staff
-            login(request, user)
-            return redirect('monitoreo_actual')
-        else:
-            messages.error(request, 'Credenciales inválidas. Inténtalo de nuevo.')
-    return  render(request, 'Usuario/login.html')
-
-def user_logout(request): 
-    logout(request)
-    return redirect('/')
-
-def crear_usuario(request):
-    if request.method == 'POST':
-        form = PersonalInfoForm(request.POST)
-        if form.is_valid():
-            #Ahora se crea el usuario con el modelo CustomUserManager
-            user = get_user_model().objects.create_user(
-                username=form.cleaned_data['email'],
-                email=form.cleaned_data['email'],
-                password=form.cleaned_data['cedula'],
-                first_name=form.cleaned_data['nombre'],
-                last_name=form.cleaned_data['apellido']
-            )
-            user.save()
-            form.save()
-
-            # Redirige a alguna página de éxito
-            return redirect('/')
-        else:
-            # Si hay errores, pasa el formulario y los errores al contexto de la plantilla
-            return render(request, 'Usuario/newUsuario.html', {'form': form, 'errors': form.errors}, status=400)
-    else:
-        # Si el método de solicitud no es POST, simplemente renderiza el formulario vacío
-        form = PersonalInfoForm()
-        return render(request, 'Usuario/newUsuario.html', {'form': form}, status=400)
-#Gestion de usuarios
-
-@login_required
-def gestion(request):
-    usuarios = {}
-    usuario_queryset = User.objects.all()
-    profile_queryset = PersonalInfo.objects.all()
-
-    for user in usuario_queryset:
-        #sino esta en el staff no se muestra
-        if  user.is_superuser == True:
-            continue
-        else:
-            profile = profile_queryset.filter(email=user.email).first()
-            usuarios[user.id] = {
-                'userId': user.id,
-                'id': user.id if profile else "Nulo",
-                'nombre': user.first_name or "Nulo",
-                'apellido': user.last_name or "Nulo",
-                'email': user.email or "Nulo",
-                'cedula': profile.cedula if profile else "Nulo",
-                'telefono': profile.telefono if profile else "Nulo",
-                'activo': user.is_active,
-                'is_staff': user.is_staff,
-            }
-
-    return render(request, 'Usuario/gestion.html', {'usuarios': usuarios})
-
-@login_required
-def desactivar_usuario(request, usuario_id):
-    usuario = get_object_or_404(User, id=usuario_id)
-    if usuario.is_active:
-        usuario.is_active = False
-        messages.error(request, f'Usuario {usuario.username} desactivado correctamente.')
-    else:
-        usuario.is_active = True
-        messages.success(request, f'Usuario {usuario.username} activado correctamente.')
-    usuario.save()
-    return redirect('gestion')
-
-@login_required
-def editar_usuario(request, user_id):
-    user = get_object_or_404(User, id=user_id)
-    profile = get_object_or_404(PersonalInfo, email=user.email)
-
-    if request.method == 'POST':
-        personal_info_form = EditPersonalInfoForm(request.POST, instance=profile)
-        user_form = EditUserForm(request.POST, instance=user)
-
-        if personal_info_form.is_valid() and user_form.is_valid():
-            personal_info_form.save()
-
-            user.email = personal_info_form.cleaned_data['email']
-            user.username = personal_info_form.cleaned_data['email']
-            user.first_name = personal_info_form.cleaned_data['nombre']
-            user.last_name = personal_info_form.cleaned_data['apellido']
-            user.is_staff = user_form.cleaned_data['is_staff']
-            user.save()
-
-            messages.success(request, 'Usuario actualizado correctamente.')
-            return redirect('gestion')
-        else:
-            messages.error(request, 'Error al actualizar el usuario. Inténtalo de nuevo.')
-    else:
-        personal_info_form = EditPersonalInfoForm(instance=profile)
-        user_form = EditUserForm(instance=user)
-
-    return render(request, 'Usuario/editar_usuario.html', {
-        'personal_info_form': personal_info_form,
-        'user_form': user_form,
-        'profile': profile
-    })
 
 ############Dashboard################
 # Dashboard Monitoreo Actual toda la logica esta dentro 
 @login_required
 def monitoreo_actual(request):
-    return render(request, 'panel_tecnico_docente/monitoreo_reciente.html')
+    collares = Bovinos.objects.all()  # Ejemplo de obtener todos los collares
+    context = {
+        'collares': collares,
+        'idCollar': 1,  # Ejemplo de pasar un id de collar específico
+    }
+    return render(request, 'appMonitor/dashboard/monitor.html', context)
 
-from django.http import JsonResponse
-from .models import Lectura
+def dashBoardData(request, id_collar=None):
+    # Validar si se proporcionó un id_collar
+    if id_collar is None:
+        return JsonResponse({'error': 'Se requiere un id_collar'}, status=400)
 
-def obtener_datos_json3(request):
-    fecha_busqueda = request.GET.get('fecha', None)
+    # Obtener el bovino asociado al id_collar
+    try:
+        bovino = Bovinos.objects.get(idCollar=id_collar)
+    except Bovinos.DoesNotExist:
+        return JsonResponse({'error': 'Collar no encontrado'}, status=404)
 
-    if fecha_busqueda:
-        # Filtrar por fecha si se proporciona
-        datos = Lectura.objects.filter(fecha_lectura=fecha_busqueda).order_by('-fecha_lectura', '-hora_lectura')
-    else:
-        # Obtener todos los datos si no se proporciona fecha
-        datos = Lectura.objects.all().order_by('-fecha_lectura', '-hora_lectura')
+    # Obtener el último registro de lectura del bovino
+    lectura = Lectura.objects.filter(id_Bovino=bovino).order_by('-fecha_lectura', '-hora_lectura').first()
+    if not lectura:
+        return JsonResponse({'error': 'No hay lecturas disponibles para este collar'}, status=404)
 
-    if datos:
-        reportes = []
-        for dato in datos:
-            fecha_creacion = dato.fecha_lectura.strftime('%Y-%m-%d') + ' ' + dato.hora_lectura.strftime('%H:%M:%S')
-            reporte = {
-                'fecha_creacion': fecha_creacion,
-                'temperatura': dato.id_Temperatura.valor,
-                'nombre_vaca': dato.id_Bovino.nombre,
-                'pulsaciones': dato.id_Pulsaciones.valor,
-                'collar_id': dato.id_Bovino.idCollar,
-            }
-            reportes.append(reporte)
-        return JsonResponse({'reportes': reportes})
-    else:
-        return JsonResponse({'error': 'No hay datos disponibles'})
+    # Crear la información del collar
+    collar_info = {
+        'idCollar': bovino.idCollar,
+        'nombre': bovino.nombre,
+        'temperatura': lectura.id_Temperatura.valor,
+        'pulsaciones': lectura.id_Pulsaciones.valor,
+        'fecha_registro': lectura.fecha_lectura.strftime('%Y-%m-%d') + " " + lectura.hora_lectura.strftime('%H:%M:%S'),
+    }
 
+    # Obtener las últimas 10 lecturas del bovino
+    ultimas_lecturas = ControlMonitoreo.objects.filter(id_Lectura__id_Bovino=bovino).order_by('-fecha_lectura', '-hora_lectura')[:10]
+
+    # Crear la lista de registros
+    registros = []
+    for lectura in ultimas_lecturas:
+        registros.append({
+            'temperatura': lectura.id_Lectura.id_Temperatura.valor,
+            'pulsaciones': lectura.id_Lectura.id_Pulsaciones.valor,
+            'fecha_registro': lectura.fecha_lectura.strftime('%Y-%m-%d') + " " + lectura.hora_lectura.strftime('%H:%M:%S'),
+        })
+
+    # Crear el cuerpo de la respuesta
+    body = {
+        'collar_info': collar_info,
+        'ultimos_registros': registros,
+    }
+
+    return JsonResponse(body, status=200)
 
 
 def ultimoRegistro(request, collar_id):
@@ -200,11 +113,6 @@ def ultimoRegistro(request, collar_id):
     else:
         return JsonResponse({'error': 'No hay datos disponibles para el collar_id proporcionado'})
 
-
-
-
-
-@login_required
 def reportes(request):
     # Obtener la página actual de la URL, por ejemplo, "/reportes/?page=2"
     page = request.GET.get('page', 1)
@@ -218,8 +126,15 @@ def reportes(request):
     # Filtrar los reportes por fecha si se proporciona una fecha de búsqueda
     if fecha_busqueda:
         try:
+            # Convertir la fecha de búsqueda a un objeto datetime
             fecha_busqueda = datetime.strptime(fecha_busqueda, '%Y-%m-%d')
-            reportes_list = reportes_list.filter(fecha_creacion__date=fecha_busqueda)
+
+            # Calcular el rango de tiempo para el día específico
+            inicio_dia = fecha_busqueda
+            fin_dia = fecha_busqueda + timedelta(days=1)
+
+            # Filtrar los reportes en el rango del día
+            reportes_list = reportes_list.filter(fecha_lectura__gte=inicio_dia, fecha_lectura__lt=fin_dia)
         except ValueError:
             # Manejar el caso en que la fecha proporcionada no sea válida
             pass
@@ -237,21 +152,26 @@ def reportes(request):
 
     context = {
         'reportes': reportes,
-        'fecha_busqueda': fecha_busqueda,
+        'fecha_busqueda': fecha_busqueda.strftime('%Y-%m-%d') if fecha_busqueda else '',
     }
 
-    return render(request, 'panel_tecnico_docente/reportes.html', context)
+    return render(request, 'appMonitor/dashboard/reports.html', context)
 
 def reporte_pdf(request):
     fecha_busqueda = request.GET.get('fecha_busqueda')
     reportes = Lectura.objects.all()
 
     if fecha_busqueda:
-        reportes = reportes.filter(fecha_lectura__date=fecha_busqueda)
+        try:
+            fecha_busqueda = datetime.strptime(fecha_busqueda, '%Y-%m-%d').date()
+            reportes = reportes.filter(fecha_lectura__date=fecha_busqueda)
+        except ValueError:
+            # Manejo de error si la fecha ingresada no es válida
+            return HttpResponse("Fecha de búsqueda inválida.", status=400)
 
     context = {
         'reportes': reportes,
-        'fecha_busqueda': fecha_busqueda,
+        'fecha_busqueda': fecha_busqueda.strftime('%Y-%m-%d') if fecha_busqueda else None,
     }
 
     table_content = get_template('panel_tecnico_docente/reportes.html').render(context).split('<table id="tablaReportes">')[1].split('</table>')[0]
@@ -270,6 +190,7 @@ def reporte_pdf(request):
 
     return HttpResponse("Error al generar el PDF.", status=500)
 
+
 def render_to_pdf(html_content, context_dict={}):
     header_html = """
 <table style="width: 100%; border-collapse: collapse;">
@@ -285,16 +206,15 @@ def render_to_pdf(html_content, context_dict={}):
 <div style="text-align: center; margin: 20px 0;">
     <h1 style="font-size: 24px; color: #333; margin: 0;">Reporte de Monitoreos al Ganado Bovino Lechero</h1>
 </div>
-
 """
 
     full_html = header_html + html_content
 
     footer_html = """
-        <footer style="text-align: center; margin-top: 20px; background-color: #f8f8f8; padding: 10px;">
-            <p style="font-size: 12px; color: #white; margin: 0;">© All rights reserved | Carrera de Ingeniería en Computación</p>
-        </footer>
-    """
+<footer style="text-align: center; margin-top: 20px; background-color: #f8f8f8; padding: 10px;">
+    <p style="font-size: 12px; color: #333; margin: 0;">© All rights reserved | Carrera de Ingeniería en Computación</p>
+</footer>
+"""
 
     full_html += footer_html
 
@@ -314,6 +234,8 @@ def temperatura(request):
 
         paginator = Paginator(reportes_list, 10)
         reportes = paginator.get_page(page)
+        
+        collares = Bovinos.objects.all()
 
     except PageNotAnInteger:
         reportes = paginator.get_page(1)
@@ -325,8 +247,11 @@ def temperatura(request):
 
     context = {
         'reportes': reportes,
+        'collares': collares,
     }
-    return render(request, 'panel_tecnico_docente/temperatura.html', context)
+    print("Collares: ", collares)
+    return render(request, 'appMonitor/dashboard/temperature.html', context)
+
 
 @login_required
 def frecuencia(request):
@@ -336,6 +261,8 @@ def frecuencia(request):
         reportes_list = Lectura.objects.all().order_by('-fecha_lectura', '-hora_lectura')
         paginator = Paginator(reportes_list, 10)
         reportes = paginator.page(page)
+        
+        collares = Bovinos.objects.all()
 
     except PageNotAnInteger:
         reportes = paginator.page(1)
@@ -350,9 +277,10 @@ def frecuencia(request):
 
     context = {
         'reportes': reportes,
+        'collares': collares,
     }
 
-    return render(request, 'panel_tecnico_docente/frecuencia.html', context)
+    return render(request, 'appMonitor/dashboard/heartRate.html', context)
 
 ##########################################
 #Metodos que consume de la plataforma movil
@@ -364,31 +292,65 @@ class LoginView1(APIView):
         username = request.data.get('username')
         password = request.data.get('password')
         user = authenticate(request, username=username, password=password)
+        print("Usuario: ", user)
+        personaInfo = PersonalInfo.objects.filter(email=username).first()
+        print("Persona: ", personaInfo)
+        # Dividir el nombre y tomar solo la primera parte
+        primer_nombre = personaInfo.nombre.split(' ')[0]
+        # Dividir el apellido y tomar solo la primera parte
+        primer_apellido = personaInfo.apellido.split(' ')[0]
+        body = {
+            'username': username,
+            'Nombres': primer_nombre + ' ' + primer_apellido,
+        }
         if user is not None:
             login(request, user)
-            return Response({'detail': 'Authentication successful'}, status=status.HTTP_200_OK)
+            return Response({'detalle': 'Inicio de sesión exitoso', 'data': body}, status=status.HTTP_200_OK)
         else:
-            return Response({'detail': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
+            return Response({'detalle': 'Credenciales inválidas'}, status=status.HTTP_401_UNAUTHORIZED)
 
 #Metodo Actualizado 
-def reporte_por_id(request, id):
+from temp_car.utils.monitorChecking import checkingMorning, checkingAfternoon,checkHoursMorning,checkHoursAfternoon, checkDate
+
+@csrf_exempt
+def reporte_por_id(request):
     # Obtener el último dato registrado para el id proporcionado
-    bovino = Bovinos.objects.filter(idCollar=id).first()
+    bovino = Bovinos.objects.filter(idCollar=request.POST.get('sensor')).first()
+    user = User.objects.filter(username=request.POST.get('username')).first()
     dato = Lectura.objects.filter(id_Bovino=bovino).order_by('-fecha_lectura', '-hora_lectura').first()
 
     if dato:
         fecha_creacion = dato.fecha_lectura.strftime('%Y-%m-%d') + ' ' + dato.hora_lectura.strftime('%H:%M:%S')
+        registro = False
+
+        # Verificar condiciones para la mañana
+        if checkingMorning(bovino) and checkHoursMorning(dato.hora_lectura) and checkDate(dato.fecha_lectura):
+            ControlMonitoreo.objects.create(
+                id_Lectura=dato,
+                id_User=user,
+            )
+            registro = True
+
+        # Verificar condiciones para la tarde
+        elif checkingAfternoon(bovino) and checkHoursAfternoon(dato.hora_lectura) and checkDate(dato.fecha_lectura):
+            ControlMonitoreo.objects.create(
+                id_Lectura=dato,
+                id_User=user,
+            )
+            registro = True
+
         reporte = {
             'collar_id': dato.id_Bovino.idCollar,
             'nombre_vaca': dato.id_Bovino.nombre,
             'temperatura': dato.id_Temperatura.valor,
             'pulsaciones': dato.id_Pulsaciones.valor,
             'fecha_creacion': fecha_creacion,
+            'registrado': registro,
         }
-        return JsonResponse({'reportes ': reporte}, status=200)
+        return JsonResponse({'reporte': reporte}, status=200)
     else:
-        return JsonResponse({'error': 'No hay datos disponibles'})
-##########################################
+        return JsonResponse({'error': 'No hay datos disponibles'}, status=400)
+
 
 def apiRegister(request):
     if request.method == 'POST':
@@ -472,21 +434,27 @@ def apiEdit(request, user_id):
 ##########################################
 @csrf_exempt  # Esto es para deshabilitar la protección CSRF en esta vista (deberías tomar medidas de seguridad apropiadas en un entorno de producción)
 def lecturaDatosArduino(request):
+    print("Entro al 1")
     body_unicode = request.body.decode('utf-8')
     lecturaDecoded = json.loads(body_unicode)
     
     if request.method == 'POST':
+        print("Entro al 2")
         collar_id = lecturaDecoded.get('collar_id', None)
         nombre_vaca = lecturaDecoded.get('nombre_vaca', None)
         mac_collar = lecturaDecoded.get('mac_collar', None)
         temperatura = lecturaDecoded.get('temperatura', None)
-        pulsaciones = lecturaDecoded.get('pulsaciones', None)
+        pulsaciones = random.randint(41, 60)
 
         if collar_id and nombre_vaca and mac_collar and temperatura and pulsaciones:
+            print("Entro al 3")
+
             #Primero verifica si el collar y la mac del collar ya existen en la base de datos
             if Bovinos.objects.filter(idCollar=collar_id, macCollar=mac_collar).exists():
+                print("Entro al 4")
                 pass
             else:
+                print("Entro al 4 crear")
                 # Si no existen, crea un nuevo registro
                 Bovinos.objects.create(
                     idCollar=collar_id,
@@ -495,6 +463,7 @@ def lecturaDatosArduino(request):
                     fecha_registro=datetime.now()
                 )
             #Crea un nuevo registro de temperatura y pulsaciones
+            print("Entro al 5")
             temperatura_obj = Temperatura.objects.create(valor=temperatura)
             pulsaciones_obj = Pulsaciones.objects.create(valor=pulsaciones)
             Lectura.objects.create(
@@ -503,7 +472,8 @@ def lecturaDatosArduino(request):
                 id_Bovino=Bovinos.objects.get(idCollar=collar_id),
                 fecha_lectura=datetime.now(),
                 hora_lectura=datetime.now().time()
-            )           
+            )  
+            print("Entro al 6")         
             return JsonResponse({'mensaje': 'Datos guardados exitosamente.'})
         else:
             print('Datos incompletos.', request.POST)
