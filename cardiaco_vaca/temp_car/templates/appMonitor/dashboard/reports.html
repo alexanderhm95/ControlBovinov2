@@ -9,46 +9,135 @@ Reportes
 {% block styles %}
 <style>
     body {
-        background-color: #cdd7e0;
+        background: linear-gradient(135deg, #ebeaea, #e0f7fa);
+        margin: 0;
+        font-family: 'Arial', sans-serif;
     }
+
     .table-responsive {
         margin-top: 20px;
         overflow-x: auto; /* Agregar overflow-x para hacer scroll horizontal en pantallas pequeñas */
     }
+
     .table thead th {
-        background-color: #343a40;
-        color: white;
+        background: linear-gradient(135deg, #36a2eb, #0056b3);
+        color: #ffffff;
+        border: none;
     }
+
+    .table tbody td {
+        background: #ffffff;
+        color: #212529;
+        border: 1px solid #dee2e6;
+    }
+
     .badge-admin {
         width: 20px;
         height: 20px;
         border-radius: 50%;
         display: inline-block;
     }
+
     #badge-success {
-        background-color: green;
+        background: linear-gradient(135deg, #28a745, #218838);
     }
+
     #badge-info {
-        background-color: yellow;
+        background: linear-gradient(135deg, #17a2b8, #117a8b);
     }
+
     .user-info {
         display: flex;
         align-items: center;
     }
+
     .user-info img {
         width: 45px;
         height: 45px;
         border-radius: 50%;
+        border: 3px solid #57a0ee;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .user-info .ms-3 {
-        margin-left: 15px;
+
+    .user-info img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     }
+
     .fw-bold {
         font-weight: bold;
     }
+
     .text-muted {
         color: #6c757d !important;
     }
+
+    .container-fluid {
+        padding: 0;
+    }
+
+    .rounded-2 {
+        border-radius: 12px;
+    }
+
+    .py-4 {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .bg-white {
+        background-color: #ffffff;
+    }
+
+    .titulo-amarillo h1 {
+        color: #7b83f5;
+        
+        padding: 10px;
+        
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color:  #004080;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .boton-descargar {
+        background-color: #f17f7b;
+        border: none;
+        transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .boton-descargar:hover {
+        background-color: #f04742;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .pagination {
+        margin-top: 20px;
+    }
+
+    .page-item.active .page-link {
+        background: linear-gradient(135deg, #007bff, #0056b3);
+        border-color: #0056b3;
+    }
+
+    .page-link {
+        transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .page-link:hover {
+        background: linear-gradient(135deg, #0056b3, #004080);
+        color: #ffffff;
+    }
+
     @media (max-width: 768px) {
         .table-responsive {
             display: block;
@@ -62,13 +151,13 @@ Reportes
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid">
-    <div class="row d-flex align-content-center justify-content-center">
+<div class="container-sm h-100">
+    <div class="row d-flex align-content-center justify-content-center h-100">
         <!-- Columna del 30% con carrusel -->
         
         <!-- Columna del 70% -->
-        <div class="col-md-8 rounded-2 py-4 bg-white" >
-            <div class="row ">
+        <div class="col-md-12 rounded-2 py-4 bg-white">
+            <div class="row">
                 <div class="col-12">
                     <div class="titulo-amarillo">
                         <h1 class="text-center mb-4">
@@ -93,7 +182,7 @@ Reportes
                     <div class="row justify-content-center">
                         <div class="col-md-10">
                             <div id="tablaContainer" class="table-responsive">
-                                <table class="table table-bordered table-hover">
+                                <table id="tablaReportes" class="table table-bordered table-hover">
                                     <thead class="table-dark">
                                         <tr>
                                             <th>Collar</th>

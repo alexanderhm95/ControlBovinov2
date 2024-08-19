@@ -9,95 +9,188 @@ Temperatura
 {% block styles %}
 <style>
     body {
-        background-color: #cdd7e0;
+        background: linear-gradient(135deg, #ebeaea, #e0f7fa);
+        margin: 0;
+        font-family: 'Arial', sans-serif;
     }
+
+    .container-sm {
+        padding: 0 15px;
+    }
+
     .table-responsive {
         margin-top: 20px;
-        border-color: #000000;
+        border: 1px solid #dcdcdc;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background: #ffffff;
+        padding: 15px;
+        width: 100%; /* Añadido para asegurar que la tabla no se desborde */
+        overflow-x: auto;
     }
+
     .table thead th {
-        background-color: #FFA1B5;
-        color: black;
+        background: linear-gradient(135deg, #fcff40, #fdff80);
+        color: #000000;
+        text-align: center;
     }
+
+    .table tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+
     .badge-admin {
         width: 20px;
         height: 20px;
         border-radius: 50%;
         display: inline-block;
     }
+
     #badge-success {
-        background-color: green;
+        background: linear-gradient(135deg, #28a745, #218838);
     }
+
     #badge-info {
-        background-color: yellow;
+        background: linear-gradient(135deg, #17a2b8, #117a8b);
     }
+
     .user-info {
         display: flex;
         align-items: center;
+        margin-bottom: 10px;
     }
+
     .user-info img {
         width: 45px;
         height: 45px;
         border-radius: 50%;
+        border: 3px solid #57a0ee;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .user-info .ms-3 {
-        margin-left: 15px;
+
+    .user-info img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     }
+
     .fw-bold {
         font-weight: bold;
     }
+
     .text-muted {
         color: #6c757d !important;
     }
+
+    .carousel-item {
+        transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 5%;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 50%;
+        background-size: 1em;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 2em;
+        height: 2em;
+    }
+
+    .carousel-control-prev-icon {
+        background-image: url('../../../static/assets/img/caret-left-fill.svg');
+    }
+
+    .carousel-control-next-icon {
+        background-image: url('../../../static/assets/img/caret-right-fill.svg');
+    }
+
     .card-container {
         display: block;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        background: #ffffff;
+        margin-bottom: 20px;
     }
+
+    .chart-canvas {
+        border: 2px solid #ddd;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .text-black {
+        color: #212529 !important;
+    }
+
+    .pagination .page-link {
+        transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .pagination .page-item.active .page-link {
+        background: linear-gradient(135deg, #007bff, #0056b3);
+        border-color: #0056b3;
+        color: #ffffff;
+    }
+
+    .pagination .page-link:hover {
+        background: linear-gradient(135deg, #0056b3, #004080);
+        color: #ffffff;
+    }
+
     @media (max-width: 768px) {
-        .table-responsive {
-            display: block;
-            overflow-x: auto;
-        }
         .table {
-            font-size: calc(1em - 2px); /* Reduce font size by 2px */
+            font-size: 0.9rem;
+        }
+
+        .carousel-control-prev, .carousel-control-next {
+            width: 10%;
         }
     }
 </style>
-
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid">
+<div class="container-sm h-100">
     <div class="row d-flex align-content-center justify-content-center">
         <!-- Columna del 70% -->
-        <div class="col-md-8 rounded-2 py-4 bg-white">
+        <div class="col-md-12 rounded-2 py-4 bg-white">
             <div class="row">
                 <div class="col-12">
-                    <div id="carouselExampleControls" class="carousel slide mt-5 " data-bs-ride="carousel" style="height: 30%;">
+                    <h1 class="text-center mb-4">
+                        Reporte de temperatura de Ganado Bovino Lechero
+                    </h1>
+                    <div id="carouselExampleControls" class="carousel slide mt-5" data-bs-ride="carousel" style="height: 30%;">
                         <div class="carousel-inner" style="height: 100%;">
                             {% for collar in collares %}
                             <div class="carousel-item {% if forloop.first %}active{% endif %}" data-id="{{ collar.idCollar }}" style="height: 100%;">
                                 <!-- Contenido del carrusel -->
                                 <div class="row d-flex justify-content-center align-items-center mx-5" style="height: 100%;">
-                                    <div class="col-12 " style="height: 100%;">
-                                        <canvas id="myChart{{ collar.idCollar }}" class="chart-canvas border-bg-success-subtle rounded-3" style="width: 100%; height: 100%;"></canvas>
+                                    <div class="col-12" style="height: 100%;">
+                                        <canvas id="myChart{{ collar.idCollar }}" class="chart-canvas rounded-3"  style="padding: 20px;"></canvas>
                                     </div>
                                 </div>
                             </div>
                             {% endfor %}
                         </div>
-                        <button class="carousel-control-prev justify-content-start" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon bg-black rounded-2" aria-hidden="true"></span>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next justify-content-end" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                            <span class="carousel-control-next-icon bg-black rounded-2" aria-hidden="true"></span>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
 
                     <div class="mt-1 d-flex justify-content-center align-items-center" style="height: 70%;">
                         <div class="col-12 col-lg-10">
-                            <div id="tablaContainer" class="table-responsive border-black">
+                            <div id="tablaContainer" class="table-responsive">
                                 <h4 class="text-center text-black">Tabla de temperaturas</h4>
                                 <table class="table table-bordered table-striped" id="tablaReportes">
                                     <thead>
@@ -194,8 +287,8 @@ $(document).ready(function() {
                             label: 'Temperatura',
                             data: temperaturas,
                             backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                            borderColor: 'rgba(255, 99, 132, 1)',
-                            borderWidth: 1
+                            borderColor: 'rgba(255, 205, 86, 1)',
+                            borderWidth: 2
                         }]
                     },
                     options: {
@@ -213,7 +306,7 @@ $(document).ready(function() {
                             },
                             title: {
                                 display: true,
-                                text: 'Constantes fisiológicas del collar ' + collares.nombre,
+                                text: 'Temperatura del collar ' + collares.nombre,
                                 font: {
                                     size: 20
                                 },

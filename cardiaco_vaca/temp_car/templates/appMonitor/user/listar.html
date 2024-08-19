@@ -9,52 +9,98 @@ Listar Usuarios
 {% block styles %}
 <style>
     body {
-        background-color: #cdd7e0;
+        background: linear-gradient(135deg, #ebeaea, #e0f7fa);
+        margin: 0;
+        font-family: 'Arial', sans-serif;
     }
+
+    .container {
+        padding: 20px;
+    }
+
     .table-responsive {
         margin-top: 20px;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
     }
+
+    .table {
+        margin-bottom: 0;
+    }
+
     .table thead th {
-        background-color: #343a40;
+        background: linear-gradient(135deg, #343a40, #212529);
         color: white;
+        text-align: center;
     }
+
+    .table tbody tr:hover {
+        background-color: #f9f9f9;
+        transition: background-color 0.3s ease;
+    }
+
     .badge-admin {
         width: 20px;
         height: 20px;
         border-radius: 50%;
         display: inline-block;
     }
+
     #badge-success {
-        background-color: green;
+        background: linear-gradient(135deg, #28a745, #218838);
     }
+
     #badge-info {
-        background-color: yellow;
+        background: linear-gradient(135deg, #17a2b8, #138496);
     }
+
     .user-info {
         display: flex;
         align-items: center;
+        margin: 10px 0;
     }
+
     .user-info img {
         width: 45px;
         height: 45px;
         border-radius: 50%;
+        border: 3px solid #57a0ee;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .user-info .ms-3 {
-        margin-left: 15px;
+
+    .user-info img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     }
-    .fw-bold {
-        font-weight: bold;
-    }
-    .text-muted {
-        color: #6c757d !important;
-    }
+
     .card-container {
         display: none;
     }
+
+    .card-container .card {
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .card-container .card:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        transform: scale(1.02);
+    }
+
+    .card-container .card .card-body {
+        padding: 20px;
+    }
+
     @media (max-width: 768px) {
         .table-responsive {
             display: none;
         }
+
         .card-container {
             display: block;
         }
@@ -63,11 +109,11 @@ Listar Usuarios
 {% endblock %}
 
 {% block content %}
-<div class="container h-100 mt-5">
+<div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-12 col-lg-10">
             <div class="pt-4 pb-2 text-center">
-                <h1>Gestión de Usuarios</h1>
+                <h1 style="color: #343a40;">Gestión de Usuarios</h1>
             </div>
 
             <!-- Tabla para pantallas grandes -->
@@ -87,7 +133,7 @@ Listar Usuarios
                         <tr>
                             <td>
                                 <div class="user-info">
-                                    <i class="fas accessibility-issue--error fa-user-circle fa-2x"></i>
+                                    <i class="fas fa-user-circle fa-2x" style="color: #343a40;"></i>
                                     <div class="ms-3">
                                         <p class="fw-bold mb-1">{{ usuario.nombre }} {{ usuario.apellido }}</p>
                                         <p class="text-muted mb-0">{{ usuario.email }}</p>
@@ -103,8 +149,8 @@ Listar Usuarios
                                 <span class="badge rounded-pill bg-info text-white p-2" id="badge-info">User</span>
                                 {% endif %}
                             </td>
-                            <td class="align-items-center justify-content-center">
-                                <div class="d-flex align-items-center justify-content-center">
+                            <td class="text-center">
+                                <div class="d-flex justify-content-center">
                                     {% if usuario.id %}
                                     <a href="{% url 'editar_usuario' usuario.userId %}" class="btn btn-warning btn-sm mx-2 rounded-2">Editar</a>
                                     {% endif %}
@@ -129,7 +175,7 @@ Listar Usuarios
                 <div class="card w-100 mb-3 shadow-sm">
                     <div class="card-body">
                         <div class="user-info">
-                            <i class="fas accessibility-issue--error fa-user-circle fa-2x"></i>
+                            <i class="fas fa-user-circle fa-2x" style="color: #343a40;"></i>
                             <div class="ms-3">
                                 <p class="fw-bold mb-1">{{ usuario.nombre }} {{ usuario.apellido }}</p>
                                 <p class="text-muted mb-0">{{ usuario.email }}</p>

@@ -12,13 +12,12 @@ Registro de Usuario
         position: fixed;
         bottom: 1%;
         right: 1%;
-        transform: translateX(0%);
         z-index: 1000;
-        width: 60%;
+        width: 80%;
         max-width: 350px;
         text-align: center;
         border-radius: 10px;
-        box-shadow: 0 0 10px rgba(235, 130, 130, 0.2);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     body {
@@ -27,7 +26,7 @@ Registro de Usuario
         align-items: center;
         justify-content: center;
         height: 100vh;
-        background: linear-gradient(135deg, #7cbeff1c, #ffffff);
+        background: linear-gradient(135deg, #d0eaff, #ffffff);
         animation: water 4s infinite alternate;
     }
 
@@ -73,6 +72,7 @@ Registro de Usuario
     .card {
         border-radius: 15px;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
     }
 
     .btn-primary {
@@ -97,6 +97,23 @@ Registro de Usuario
         border-color: #545b62;
     }
 
+    .form-control {
+        border-radius: 8px;
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .form-check {
+        margin-top: 1rem;
+    }
+
+    .card-title {
+        margin-bottom: 1.5rem;
+    }
+
     @media (max-width: 767px) {
         .container {
             width: 90%;
@@ -114,90 +131,85 @@ Registro de Usuario
 <div class="reflections"></div>
 <main>
     <div class="container">
-        <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-4 col-10 d-flex flex-column align-items-center justify-content-center">
-                        <div class="card border-2 shadow-lg w-100">
-                            <div class="card-title">
-                                <div class="d-flex justify-content-center pt-2 px-5">
-                                    <a href="#" class="logo d-flex align-items-center w-auto">
-                                        <img src="{% static 'assets/img/logounl.png' %}" alt="Logo" class="img-fluid" style="max-height: 70px;">
-                                    </a>
+        <section class="section min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 col-10">
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-header text-center py-4">
+                            <a href="#" class="logo d-flex justify-content-center">
+                                <img src="{% static 'assets/img/logounl.png' %}" alt="Logo" class="img-fluid" style="max-height: 100px;">
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title text-center fs-4 mb-4">Registrar nueva cuenta</h6>
+                            {% if messages %}
+                            <div id="alert-container" class="alert-container" style="display: none;">
+                                {% for message in messages %}
+                                <div class="alert {% if message.tags == 'success' %}alert-success{% else %}alert-danger{% endif %}" role="alert">
+                                    {{ message }}
                                 </div>
+                                {% endfor %}
                             </div>
-                            <div class="card-body">
-                                <h6 class="card-title text-center fs-4 p-0">Registrar nueva cuenta</h6>
-                                {% if messages %}
-                                <div id="alert-container" class="alert-container" style="display: none;">
-                                    {% for message in messages %}
-                                    <div class="alert {% if message.tags == 'success' %}alert-success{% else %}alert-danger{% endif %}" role="alert">
-                                        {{ message }}
+                            <script>
+                                window.onload = function() {
+                                    mostrarAlerta();
+                                };
+                            </script>
+                            {% endif %}
+                            <form action="" method="POST" class="row g-3 needs-validation" novalidate>
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <label for="{{ form.nombre.id_for_label }}">{{ form.nombre.label }}</label>
+                                    <input type="text" class="form-control {% if form.nombre.errors %}is-invalid{% endif %}" name="{{ form.nombre.name }}" id="{{ form.nombre.id_for_label }}" required>
+                                    {% if form.nombre.errors %}
+                                    <div class="invalid-feedback">
+                                        {{ form.nombre.errors|join:", " }}
                                     </div>
-                                    {% endfor %}
+                                    {% endif %}
                                 </div>
-                                <script>
-                                    window.onload = function() {
-                                        mostrarAlerta();
-                                    };
-                                </script>
-                                {% endif %}
-                                <form action="" method="POST" class="row px-3 py-2 needs-validation" novalidate>
-                                    {% csrf_token %}
-                                    <div class="form-group">
-                                        <label for="{{ form.nombre.id_for_label }}">{{ form.nombre.label }}</label>
-                                        <input type="text" class="form-control {% if form.nombre.errors %} is-invalid {% endif %}" name="{{ form.nombre.name }}" id="{{ form.nombre.id_for_label }}" required>
-                                        {% if form.nombre.errors %}
-                                        <div class="invalid-feedback">
-                                            {{ form.nombre.errors|join:", " }}
-                                        </div>
-                                        {% endif %}
+                                <div class="form-group">
+                                    <label for="{{ form.apellido.id_for_label }}">{{ form.apellido.label }}</label>
+                                    <input type="text" class="form-control {% if form.apellido.errors %}is-invalid{% endif %}" name="{{ form.apellido.name }}" id="{{ form.apellido.id_for_label }}" required>
+                                    {% if form.apellido.errors %}
+                                    <div class="invalid-feedback">
+                                        {{ form.apellido.errors|join:", " }}
                                     </div>
-                                    <div class="form-group">
-                                        <label for="{{ form.apellido.id_for_label }}">{{ form.apellido.label }}</label>
-                                        <input type="text" class="form-control {% if form.apellido.errors %} is-invalid {% endif %}" name="{{ form.apellido.name }}" id="{{ form.apellido.id_for_label }}" required>
-                                        {% if form.apellido.errors %}
-                                        <div class="invalid-feedback">
-                                            {{ form.apellido.errors|join:", " }}
-                                        </div>
-                                        {% endif %}
+                                    {% endif %}
+                                </div>
+                                <div class="form-group">
+                                    <label for="{{ form.cedula.id_for_label }}">{{ form.cedula.label }}</label>
+                                    <input type="text" class="form-control {% if form.cedula.errors %}is-invalid{% endif %}" name="{{ form.cedula.name }}" id="{{ form.cedula.id_for_label }}" required>
+                                    {% if form.cedula.errors %}
+                                    <div class="invalid-feedback">
+                                        {{ form.cedula.errors|join:", " }}
                                     </div>
-                                    <div class="form-group">
-                                        <label for="{{ form.cedula.id_for_label }}">{{ form.cedula.label }}</label>
-                                        <input type="text" class="form-control {% if form.cedula.errors %} is-invalid {% endif %}" name="{{ form.cedula.name }}" id="{{ form.cedula.id_for_label }}" required>
-                                        {% if form.cedula.errors %}
-                                        <div class="invalid-feedback">
-                                            {{ form.cedula.errors|join:", " }}
-                                        </div>
-                                        {% endif %}
+                                    {% endif %}
+                                </div>
+                                <div class="form-group">
+                                    <label for="{{ form.email.id_for_label }}">{{ form.email.label }}</label>
+                                    <input type="email" class="form-control {% if form.email.errors %}is-invalid{% endif %}" name="{{ form.email.name }}" id="{{ form.email.id_for_label }}" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Ingrese un correo electrónico válido">
+                                    {% if form.email.errors %}
+                                    <div class="invalid-feedback">
+                                        {{ form.email.errors|join:", " }}
                                     </div>
-                                    <div class="form-group">
-                                        <label for="{{ form.email.id_for_label }}">{{ form.email.label }}</label>
-                                        <input type="email" class="form-control {% if form.email.errors %} is-invalid {% endif %}" name="{{ form.email.name }}" id="{{ form.email.id_for_label }}" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Ingrese un correo electrónico válido">
-                                        {% if form.email.errors %}
-                                        <div class="invalid-feedback">
-                                            {{ form.email.errors|join:", " }}
-                                        </div>
-                                        {% endif %}
+                                    {% endif %}
+                                </div>
+                                <div class="form-group">
+                                    <label for="{{ form.telefono.id_for_label }}">{{ form.telefono.label }}</label>
+                                    <input type="text" class="form-control {% if form.telefono.errors %}is-invalid{% endif %}" name="{{ form.telefono.name }}" id="{{ form.telefono.id_for_label }}" required>
+                                    {% if form.telefono.errors %}
+                                    <div class="invalid-feedback">
+                                        {{ form.telefono.errors|join:", " }}
                                     </div>
-                                    <div class="form-group">
-                                        <label for="{{ form.telefono.id_for_label }}">{{ form.telefono.label }}</label>
-                                        <input type="text" class="form-control {% if form.telefono.errors %} is-invalid {% endif %}" name="{{ form.telefono.name }}" id="{{ form.telefono.id_for_label }}" required>
-                                        {% if form.telefono.errors %}
-                                        <div class="invalid-feedback">
-                                            {{ form.telefono.errors|join:", " }}
-                                        </div>
-                                        {% endif %}
-                                    </div>
-                                    <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center mt-3">
-                                        <button type="button" class="btn btn-secondary mb-2 mb-sm-0" onclick="window.location.href='{% url 'salir' %}'">
-                                            <i class="fas fa-arrow-left"></i> Regresar
-                                        </button>
-                                        <button type="submit" class="btn btn-primary">Registrar Usuario</button>
-                                    </div>
-                                    
-                                </form>
-                            </div>
+                                    {% endif %}
+                                </div>
+                                <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center mt-3">
+                                    <button type="button" class="btn btn-secondary mb-2 mb-sm-0" onclick="window.location.href='{% url 'salir' %}'">
+                                        <i class="fas fa-arrow-left"></i> Regresar
+                                    </button>
+                                    <button type="submit" class="btn btn-primary">Registrar Usuario</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

@@ -174,7 +174,8 @@ def reporte_pdf(request):
         'fecha_busqueda': fecha_busqueda.strftime('%Y-%m-%d') if fecha_busqueda else None,
     }
 
-    table_content = get_template('panel_tecnico_docente/reportes.html').render(context).split('<table id="tablaReportes">')[1].split('</table>')[0]
+    table_content = get_template('appMonitor/dashboard/reports.html').render(context).split('<table id="tablaReportes" class="table table-bordered table-hover">')[1].split('</table>')[0]
+    print(table_content)
     table_content = table_content.replace('<th>', '<th style="padding: 8px; text-align: center; background-color: #72b4fc;">')
     table_content = table_content.replace('<td>', '<td style="padding: 8px; text-align: center; border: 1px solid #ddd;">')
     table_html = f'<table id="tablaReportes" style="width: 80%; margin: 20px auto; border-collapse: collapse;">{table_content}</table>'
