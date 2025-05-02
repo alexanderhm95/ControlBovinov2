@@ -71,7 +71,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'temp_car',
-    'bootstrap5',
+    'django_bootstrap5',
     'corsheaders',
     'rest_framework.authtoken',
     'widget_tweaks',
