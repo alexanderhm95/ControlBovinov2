@@ -925,7 +925,7 @@
         "kind": 5,
         "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
         "description": "cardiaco_vaca.cardiaco_vaca.settings",
-        "peekOfCode": "SECRET_KEY = 'django-insecure-gse7w_va40r(70@*(*6x*1th%+1gzr53sdrk+@y&=w6idwm*g@'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['*']\nLOGIN_REDIRECT_URL = ('dashboard_redirect')\nLOGOUT_REDIRECT_URL = ('login')\nSESSION_COOKIE_AGE = 1800  # Duración de la sesión en segundos (media hora)\n#handler404 = 'temp_car.views.error_404_view'\nCORS_ALLOW_ALL_ORIGINS = True\n# Opcional: especificar métodos permitidos (por defecto ya permite estos métodos)",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-gse7w_va40r(70@*(*6x*1th%+1gzr53sdrk+@y&=w6idwm*g@'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['*']\nLOGIN_REDIRECT_URL = ('dashboard_redirect')\nLOGOUT_REDIRECT_URL = ('login')\nSESSION_COOKIE_AGE = 1800  # Duración de la sesión en segundos (media hora)\n#handler404 = 'temp_car.views.error_404_view'\nCORS_ALLOW_ALL_ORIGINS = True\nCSRF_TRUSTED_ORIGINS = [",
         "detail": "cardiaco_vaca.cardiaco_vaca.settings",
         "documentation": {}
     },
@@ -934,7 +934,7 @@
         "kind": 5,
         "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
         "description": "cardiaco_vaca.cardiaco_vaca.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = ['*']\nLOGIN_REDIRECT_URL = ('dashboard_redirect')\nLOGOUT_REDIRECT_URL = ('login')\nSESSION_COOKIE_AGE = 1800  # Duración de la sesión en segundos (media hora)\n#handler404 = 'temp_car.views.error_404_view'\nCORS_ALLOW_ALL_ORIGINS = True\n# Opcional: especificar métodos permitidos (por defecto ya permite estos métodos)\nCORS_ALLOW_METHODS = [\n    \"DELETE\",",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = ['*']\nLOGIN_REDIRECT_URL = ('dashboard_redirect')\nLOGOUT_REDIRECT_URL = ('login')\nSESSION_COOKIE_AGE = 1800  # Duración de la sesión en segundos (media hora)\n#handler404 = 'temp_car.views.error_404_view'\nCORS_ALLOW_ALL_ORIGINS = True\nCSRF_TRUSTED_ORIGINS = [\n    \"https://pmonitunl.vercel.app\"\n]",
         "detail": "cardiaco_vaca.cardiaco_vaca.settings",
         "documentation": {}
     },
@@ -943,7 +943,7 @@
         "kind": 5,
         "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
         "description": "cardiaco_vaca.cardiaco_vaca.settings",
-        "peekOfCode": "ALLOWED_HOSTS = ['*']\nLOGIN_REDIRECT_URL = ('dashboard_redirect')\nLOGOUT_REDIRECT_URL = ('login')\nSESSION_COOKIE_AGE = 1800  # Duración de la sesión en segundos (media hora)\n#handler404 = 'temp_car.views.error_404_view'\nCORS_ALLOW_ALL_ORIGINS = True\n# Opcional: especificar métodos permitidos (por defecto ya permite estos métodos)\nCORS_ALLOW_METHODS = [\n    \"DELETE\",\n    \"GET\",",
+        "peekOfCode": "ALLOWED_HOSTS = ['*']\nLOGIN_REDIRECT_URL = ('dashboard_redirect')\nLOGOUT_REDIRECT_URL = ('login')\nSESSION_COOKIE_AGE = 1800  # Duración de la sesión en segundos (media hora)\n#handler404 = 'temp_car.views.error_404_view'\nCORS_ALLOW_ALL_ORIGINS = True\nCSRF_TRUSTED_ORIGINS = [\n    \"https://pmonitunl.vercel.app\"\n]\n# Opcional: especificar métodos permitidos (por defecto ya permite estos métodos)",
         "detail": "cardiaco_vaca.cardiaco_vaca.settings",
         "documentation": {}
     },
@@ -952,7 +952,7 @@
         "kind": 5,
         "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
         "description": "cardiaco_vaca.cardiaco_vaca.settings",
-        "peekOfCode": "LOGIN_REDIRECT_URL = ('dashboard_redirect')\nLOGOUT_REDIRECT_URL = ('login')\nSESSION_COOKIE_AGE = 1800  # Duración de la sesión en segundos (media hora)\n#handler404 = 'temp_car.views.error_404_view'\nCORS_ALLOW_ALL_ORIGINS = True\n# Opcional: especificar métodos permitidos (por defecto ya permite estos métodos)\nCORS_ALLOW_METHODS = [\n    \"DELETE\",\n    \"GET\",\n    \"OPTIONS\",",
+        "peekOfCode": "LOGIN_REDIRECT_URL = ('dashboard_redirect')\nLOGOUT_REDIRECT_URL = ('login')\nSESSION_COOKIE_AGE = 1800  # Duración de la sesión en segundos (media hora)\n#handler404 = 'temp_car.views.error_404_view'\nCORS_ALLOW_ALL_ORIGINS = True\nCSRF_TRUSTED_ORIGINS = [\n    \"https://pmonitunl.vercel.app\"\n]\n# Opcional: especificar métodos permitidos (por defecto ya permite estos métodos)\nCORS_ALLOW_METHODS = [",
         "detail": "cardiaco_vaca.cardiaco_vaca.settings",
         "documentation": {}
     },
@@ -961,7 +961,7 @@
         "kind": 5,
         "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
         "description": "cardiaco_vaca.cardiaco_vaca.settings",
-        "peekOfCode": "LOGOUT_REDIRECT_URL = ('login')\nSESSION_COOKIE_AGE = 1800  # Duración de la sesión en segundos (media hora)\n#handler404 = 'temp_car.views.error_404_view'\nCORS_ALLOW_ALL_ORIGINS = True\n# Opcional: especificar métodos permitidos (por defecto ya permite estos métodos)\nCORS_ALLOW_METHODS = [\n    \"DELETE\",\n    \"GET\",\n    \"OPTIONS\",\n    \"PATCH\",",
+        "peekOfCode": "LOGOUT_REDIRECT_URL = ('login')\nSESSION_COOKIE_AGE = 1800  # Duración de la sesión en segundos (media hora)\n#handler404 = 'temp_car.views.error_404_view'\nCORS_ALLOW_ALL_ORIGINS = True\nCSRF_TRUSTED_ORIGINS = [\n    \"https://pmonitunl.vercel.app\"\n]\n# Opcional: especificar métodos permitidos (por defecto ya permite estos métodos)\nCORS_ALLOW_METHODS = [\n    \"DELETE\",",
         "detail": "cardiaco_vaca.cardiaco_vaca.settings",
         "documentation": {}
     },
@@ -970,7 +970,7 @@
         "kind": 5,
         "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
         "description": "cardiaco_vaca.cardiaco_vaca.settings",
-        "peekOfCode": "SESSION_COOKIE_AGE = 1800  # Duración de la sesión en segundos (media hora)\n#handler404 = 'temp_car.views.error_404_view'\nCORS_ALLOW_ALL_ORIGINS = True\n# Opcional: especificar métodos permitidos (por defecto ya permite estos métodos)\nCORS_ALLOW_METHODS = [\n    \"DELETE\",\n    \"GET\",\n    \"OPTIONS\",\n    \"PATCH\",\n    \"POST\",",
+        "peekOfCode": "SESSION_COOKIE_AGE = 1800  # Duración de la sesión en segundos (media hora)\n#handler404 = 'temp_car.views.error_404_view'\nCORS_ALLOW_ALL_ORIGINS = True\nCSRF_TRUSTED_ORIGINS = [\n    \"https://pmonitunl.vercel.app\"\n]\n# Opcional: especificar métodos permitidos (por defecto ya permite estos métodos)\nCORS_ALLOW_METHODS = [\n    \"DELETE\",\n    \"GET\",",
         "detail": "cardiaco_vaca.cardiaco_vaca.settings",
         "documentation": {}
     },
@@ -979,7 +979,7 @@
         "kind": 5,
         "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
         "description": "cardiaco_vaca.cardiaco_vaca.settings",
-        "peekOfCode": "#handler404 = 'temp_car.views.error_404_view'\nCORS_ALLOW_ALL_ORIGINS = True\n# Opcional: especificar métodos permitidos (por defecto ya permite estos métodos)\nCORS_ALLOW_METHODS = [\n    \"DELETE\",\n    \"GET\",\n    \"OPTIONS\",\n    \"PATCH\",\n    \"POST\",\n    \"PUT\",",
+        "peekOfCode": "#handler404 = 'temp_car.views.error_404_view'\nCORS_ALLOW_ALL_ORIGINS = True\nCSRF_TRUSTED_ORIGINS = [\n    \"https://pmonitunl.vercel.app\"\n]\n# Opcional: especificar métodos permitidos (por defecto ya permite estos métodos)\nCORS_ALLOW_METHODS = [\n    \"DELETE\",\n    \"GET\",\n    \"OPTIONS\",",
         "detail": "cardiaco_vaca.cardiaco_vaca.settings",
         "documentation": {}
     },
@@ -988,7 +988,16 @@
         "kind": 5,
         "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
         "description": "cardiaco_vaca.cardiaco_vaca.settings",
-        "peekOfCode": "CORS_ALLOW_ALL_ORIGINS = True\n# Opcional: especificar métodos permitidos (por defecto ya permite estos métodos)\nCORS_ALLOW_METHODS = [\n    \"DELETE\",\n    \"GET\",\n    \"OPTIONS\",\n    \"PATCH\",\n    \"POST\",\n    \"PUT\",\n]",
+        "peekOfCode": "CORS_ALLOW_ALL_ORIGINS = True\nCSRF_TRUSTED_ORIGINS = [\n    \"https://pmonitunl.vercel.app\"\n]\n# Opcional: especificar métodos permitidos (por defecto ya permite estos métodos)\nCORS_ALLOW_METHODS = [\n    \"DELETE\",\n    \"GET\",\n    \"OPTIONS\",\n    \"PATCH\",",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CSRF_TRUSTED_ORIGINS",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "CSRF_TRUSTED_ORIGINS = [\n    \"https://pmonitunl.vercel.app\"\n]\n# Opcional: especificar métodos permitidos (por defecto ya permite estos métodos)\nCORS_ALLOW_METHODS = [\n    \"DELETE\",\n    \"GET\",\n    \"OPTIONS\",\n    \"PATCH\",\n    \"POST\",",
         "detail": "cardiaco_vaca.cardiaco_vaca.settings",
         "documentation": {}
     },
