@@ -23,12 +23,14 @@ from django.contrib.auth.forms import PasswordResetForm
 def send_custom_password_reset(request):
     form = PasswordResetForm(request.POST)
     if form.is_valid():
+        domain_override = config('URL_DOMAIN', default='localhost:8000')
         form.save(
             request=request,
-            domain_override=config('URL_DOMAIN', default='localhost:8000')
-            use_https=True,  # Si usas HTTPS en Vercel
+            use_https=True,
+            domain_override=domain_override,
             email_template_name='registration/password_reset_email.html',
         )
+        
 
 def user_login(request):
     if request.method == 'POST':
