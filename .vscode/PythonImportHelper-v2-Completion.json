@@ -916,7 +916,7 @@
         "kind": 5,
         "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
         "description": "cardiaco_vaca.cardiaco_vaca.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-gse7w_va40r(70@*(*6x*1th%+1gzr53sdrk+@y&=w6idwm*g@'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['*']\nLOGIN_REDIRECT_URL = ('dashboard_redirect')\nLOGOUT_REDIRECT_URL = ('login')",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-gse7w_va40r(70@*(*6x*1th%+1gzr53sdrk+@y&=w6idwm*g@'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['52.186.171.36', 'pmonitunl.vercel.app', 'localhost']\nUSE_X_FORWARDED_HOST = True\nSECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')",
         "detail": "cardiaco_vaca.cardiaco_vaca.settings",
         "documentation": {}
     },
@@ -925,7 +925,7 @@
         "kind": 5,
         "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
         "description": "cardiaco_vaca.cardiaco_vaca.settings",
-        "peekOfCode": "SECRET_KEY = 'django-insecure-gse7w_va40r(70@*(*6x*1th%+1gzr53sdrk+@y&=w6idwm*g@'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['*']\nLOGIN_REDIRECT_URL = ('dashboard_redirect')\nLOGOUT_REDIRECT_URL = ('login')\nSESSION_COOKIE_AGE = 1800  # Duración de la sesión en segundos (media hora)\n#handler404 = 'temp_car.views.error_404_view'\nCORS_ALLOW_ALL_ORIGINS = True\nCSRF_TRUSTED_ORIGINS = [",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-gse7w_va40r(70@*(*6x*1th%+1gzr53sdrk+@y&=w6idwm*g@'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['52.186.171.36', 'pmonitunl.vercel.app', 'localhost']\nUSE_X_FORWARDED_HOST = True\nSECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')\nDEFAULT_DOMAIN = \"pmonitunl.vercel.app\"\nLOGIN_REDIRECT_URL = ('dashboard_redirect')\nLOGOUT_REDIRECT_URL = ('login')\nSESSION_COOKIE_AGE = 1800  # Duración de la sesión en segundos (media hora)",
         "detail": "cardiaco_vaca.cardiaco_vaca.settings",
         "documentation": {}
     },
@@ -934,7 +934,7 @@
         "kind": 5,
         "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
         "description": "cardiaco_vaca.cardiaco_vaca.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = ['*']\nLOGIN_REDIRECT_URL = ('dashboard_redirect')\nLOGOUT_REDIRECT_URL = ('login')\nSESSION_COOKIE_AGE = 1800  # Duración de la sesión en segundos (media hora)\n#handler404 = 'temp_car.views.error_404_view'\nCORS_ALLOW_ALL_ORIGINS = True\nCSRF_TRUSTED_ORIGINS = [\n    \"https://pmonitunl.vercel.app\"\n]",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = ['52.186.171.36', 'pmonitunl.vercel.app', 'localhost']\nUSE_X_FORWARDED_HOST = True\nSECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')\nDEFAULT_DOMAIN = \"pmonitunl.vercel.app\"\nLOGIN_REDIRECT_URL = ('dashboard_redirect')\nLOGOUT_REDIRECT_URL = ('login')\nSESSION_COOKIE_AGE = 1800  # Duración de la sesión en segundos (media hora)\n#handler404 = 'temp_car.views.error_404_view'\nCORS_ALLOW_ALL_ORIGINS = True",
         "detail": "cardiaco_vaca.cardiaco_vaca.settings",
         "documentation": {}
     },
@@ -943,7 +943,34 @@
         "kind": 5,
         "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
         "description": "cardiaco_vaca.cardiaco_vaca.settings",
-        "peekOfCode": "ALLOWED_HOSTS = ['*']\nLOGIN_REDIRECT_URL = ('dashboard_redirect')\nLOGOUT_REDIRECT_URL = ('login')\nSESSION_COOKIE_AGE = 1800  # Duración de la sesión en segundos (media hora)\n#handler404 = 'temp_car.views.error_404_view'\nCORS_ALLOW_ALL_ORIGINS = True\nCSRF_TRUSTED_ORIGINS = [\n    \"https://pmonitunl.vercel.app\"\n]\n# Opcional: especificar métodos permitidos (por defecto ya permite estos métodos)",
+        "peekOfCode": "ALLOWED_HOSTS = ['52.186.171.36', 'pmonitunl.vercel.app', 'localhost']\nUSE_X_FORWARDED_HOST = True\nSECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')\nDEFAULT_DOMAIN = \"pmonitunl.vercel.app\"\nLOGIN_REDIRECT_URL = ('dashboard_redirect')\nLOGOUT_REDIRECT_URL = ('login')\nSESSION_COOKIE_AGE = 1800  # Duración de la sesión en segundos (media hora)\n#handler404 = 'temp_car.views.error_404_view'\nCORS_ALLOW_ALL_ORIGINS = True\nCSRF_TRUSTED_ORIGINS = [",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_X_FORWARDED_HOST",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "USE_X_FORWARDED_HOST = True\nSECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')\nDEFAULT_DOMAIN = \"pmonitunl.vercel.app\"\nLOGIN_REDIRECT_URL = ('dashboard_redirect')\nLOGOUT_REDIRECT_URL = ('login')\nSESSION_COOKIE_AGE = 1800  # Duración de la sesión en segundos (media hora)\n#handler404 = 'temp_car.views.error_404_view'\nCORS_ALLOW_ALL_ORIGINS = True\nCSRF_TRUSTED_ORIGINS = [\n    \"https://pmonitunl.vercel.app\"",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECURE_PROXY_SSL_HEADER",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')\nDEFAULT_DOMAIN = \"pmonitunl.vercel.app\"\nLOGIN_REDIRECT_URL = ('dashboard_redirect')\nLOGOUT_REDIRECT_URL = ('login')\nSESSION_COOKIE_AGE = 1800  # Duración de la sesión en segundos (media hora)\n#handler404 = 'temp_car.views.error_404_view'\nCORS_ALLOW_ALL_ORIGINS = True\nCSRF_TRUSTED_ORIGINS = [\n    \"https://pmonitunl.vercel.app\"\n]",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_DOMAIN",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "DEFAULT_DOMAIN = \"pmonitunl.vercel.app\"\nLOGIN_REDIRECT_URL = ('dashboard_redirect')\nLOGOUT_REDIRECT_URL = ('login')\nSESSION_COOKIE_AGE = 1800  # Duración de la sesión en segundos (media hora)\n#handler404 = 'temp_car.views.error_404_view'\nCORS_ALLOW_ALL_ORIGINS = True\nCSRF_TRUSTED_ORIGINS = [\n    \"https://pmonitunl.vercel.app\"\n]\n# Opcional: especificar métodos permitidos (por defecto ya permite estos métodos)",
         "detail": "cardiaco_vaca.cardiaco_vaca.settings",
         "documentation": {}
     },
