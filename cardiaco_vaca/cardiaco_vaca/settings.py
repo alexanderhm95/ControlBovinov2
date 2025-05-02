@@ -36,6 +36,10 @@ SESSION_COOKIE_AGE = 1800  # Duración de la sesión en segundos (media hora)
 #handler404 = 'temp_car.views.error_404_view'
 
 CORS_ALLOW_ALL_ORIGINS = True
+CSRF_TRUSTED_ORIGINS = [
+    "https://pmonitunl.vercel.app"
+]
+
 
 # Opcional: especificar métodos permitidos (por defecto ya permite estos métodos)
 CORS_ALLOW_METHODS = [
