@@ -16,6 +16,19 @@ from django.conf import settings
 from temp_car.models import *
 from temp_car.forms import *
 
+
+from django.contrib.auth.forms import PasswordResetForm
+
+def send_custom_password_reset(request):
+    form = PasswordResetForm(request.POST)
+    if form.is_valid():
+        form.save(
+            request=request,
+            domain_override="pmonitunl.vercel.app",  # Aquí fuerzas el dominio correcto
+            use_https=True,  # Si usas HTTPS en Vercel
+            email_template_name='registration/password_reset_email.html',
+        )
+
 def user_login(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -133,7 +146,6 @@ def editar_usuario(request, user_id):
 
 
 
-
 class CustomPasswordResetView(View):
     template_name = 'appMonitor/resetPassword/password_reset_form.html'
 
@@ -143,31 +155,18 @@ class CustomPasswordResetView(View):
 
     def post(self, request):
         form = PasswordResetForm(request.POST)
-        print("Entro aqui")
         if form.is_valid():
-            email = form.cleaned_data['email']
-            associated_users = User.objects.filter(email=email)
-            if associated_users.exists():
-                for user in associated_users:
-                    subject = 'Restablecimiento de contraseña solicitado'
-                    email_template_name = 'appMonitor/resetPassword/password_reset_email.html'
-                    c = {
-                        'email': user.email,
-                        'domain': request.META['HTTP_HOST'],
-                        'site_name': 'Control y Monitoreo de Constantes Fisiológicas UNL',
-                        'uid': urlsafe_base64_encode(force_bytes(user.pk)),
-                        'user': user,
-                        'token': default_token_generator.make_token(user),
-                        'protocol': 'http' if not request.is_secure() else 'https',
-                    }
-                    email_content = render_to_string(email_template_name, c)
-                    print(email_content)
-                    es = send_mail(subject, email_content, settings.DEFAULT_FROM_EMAIL, [user.email], fail_silently=False)
-                    print("Correo enviado",es)
-                return redirect('passwordResetDone')
-            else:
-                messages.error(request, 'No hay usuario registrado con el correo electrónico proporcionado.')
+            form.save(
+                request=request,
+                use_https=True,
+                domain_override="pmonitunl.vercel.app",
+                email_template_name='appMonitor/resetPassword/password_reset_email.html',
+                subject_template_name='appMonitor/resetPassword/password_reset_subject.txt',  # Puedes crear este archivo si lo deseas
+                from_email=settings.DEFAULT_FROM_EMAIL
+            )
+            return redirect('passwordResetDone')
         return render(request, self.template_name, {'form': form})
+
 
 class ResetPasswordDoneView(View):
     template_name = 'appMonitor/resetPassword/password_reset_done.html'
