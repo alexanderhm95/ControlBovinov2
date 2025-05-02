@@ -131,17 +131,8 @@ WSGI_APPLICATION = 'cardiaco_vaca.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',  # Motor para MySQL/MariaDB
-        'NAME': 'bovinos_unl',  # Nombre de tu base de datos
-        'USER': 'radius_ncs',  # Usuario de la base de datos
-        'PASSWORD': 'tics_ncs',  # Contraseña del usuario
-        'HOST': '190.96.96.20',  # Dirección del servidor MySQL (localhost o IP)
-        'PORT': '3306',  # Puerto de MySQL (3306 por defecto)
-        ## Para pruebas despues de la reunion
-        #'OPTIONS': {
-        #    'sql_mode': 'STRICT_TRANS_TABLES',
-        #},
-        #'CONN_MAX_AGE': 600,  # Mantiene conexiones abiertas por 10 min
+        'ENGINE': 'django.db.backends.sqlite3',  # Motor para SQLite
+        'NAME': 'libsql://databasebovinos-alexanderhm95.aws-us-east-1.turso.io',  # URL de la base de datos SQLite
     }
 }
 
