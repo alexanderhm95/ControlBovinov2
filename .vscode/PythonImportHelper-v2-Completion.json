@@ -491,6 +491,14 @@
         "documentation": {}
     },
     {
+        "label": "PasswordResetForm",
+        "importPath": "django.contrib.auth.forms",
+        "description": "django.contrib.auth.forms",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.forms",
+        "documentation": {}
+    },
+    {
         "label": "login_required",
         "importPath": "django.contrib.auth.decorators",
         "description": "django.contrib.auth.decorators",
@@ -1402,7 +1410,7 @@
         "kind": 6,
         "importPath": "cardiaco_vaca.temp_car.user.users_views",
         "description": "cardiaco_vaca.temp_car.user.users_views",
-        "peekOfCode": "class CustomPasswordResetView(View):\n    template_name = 'appMonitor/resetPassword/password_reset_form.html'\n    def get(self, request):\n        form = PasswordResetForm()\n        return render(request, self.template_name, {'form': form})\n    def post(self, request):\n        form = PasswordResetForm(request.POST)\n        print(\"Entro aqui\")\n        if form.is_valid():\n            email = form.cleaned_data['email']",
+        "peekOfCode": "class CustomPasswordResetView(View):\n    template_name = 'appMonitor/resetPassword/password_reset_form.html'\n    def get(self, request):\n        form = PasswordResetForm()\n        return render(request, self.template_name, {'form': form})\n    def post(self, request):\n        form = PasswordResetForm(request.POST)\n        if form.is_valid():\n            form.save(\n                request=request,",
         "detail": "cardiaco_vaca.temp_car.user.users_views",
         "documentation": {}
     },
@@ -1430,6 +1438,15 @@
         "importPath": "cardiaco_vaca.temp_car.user.users_views",
         "description": "cardiaco_vaca.temp_car.user.users_views",
         "peekOfCode": "class ResetPasswordCompleteView(View):\n    template_name = 'appMonitor/resetPassword/password_reset_complete.html'\n    def get(self, request):\n        return render(request, self.template_name)",
+        "detail": "cardiaco_vaca.temp_car.user.users_views",
+        "documentation": {}
+    },
+    {
+        "label": "send_custom_password_reset",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.user.users_views",
+        "description": "cardiaco_vaca.temp_car.user.users_views",
+        "peekOfCode": "def send_custom_password_reset(request):\n    form = PasswordResetForm(request.POST)\n    if form.is_valid():\n        form.save(\n            request=request,\n            domain_override=\"pmonitunl.vercel.app\",  # Aquí fuerzas el dominio correcto\n            use_https=True,  # Si usas HTTPS en Vercel\n            email_template_name='registration/password_reset_email.html',\n        )\ndef user_login(request):",
         "detail": "cardiaco_vaca.temp_car.user.users_views",
         "documentation": {}
     },
