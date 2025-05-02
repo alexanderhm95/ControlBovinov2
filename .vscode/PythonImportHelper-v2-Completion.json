@@ -1,0 +1,1886 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "reverse_lazy",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "constants",
+        "importPath": "django.contrib.messages",
+        "description": "django.contrib.messages",
+        "isExtraImport": true,
+        "detail": "django.contrib.messages",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "auth",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "messages",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "messages",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "isExtraImport": true,
+        "detail": "django.conf.urls.static",
+        "documentation": {}
+    },
+    {
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "isExtraImport": true,
+        "detail": "django.conf.urls.static",
+        "documentation": {}
+    },
+    {
+        "label": "error_404_view",
+        "importPath": "temp_car.views",
+        "description": "temp_car.views",
+        "isExtraImport": true,
+        "detail": "temp_car.views",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "temp_car.views",
+        "description": "temp_car.views",
+        "isExtraImport": true,
+        "detail": "temp_car.views",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponseNotFound",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "django.db.models.deletion",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "temp_car.utils.getHours",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "temp_car.utils.getHours",
+        "description": "temp_car.utils.getHours",
+        "detail": "temp_car.utils.getHours",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetForm",
+        "importPath": "django.contrib.auth.forms",
+        "description": "django.contrib.auth.forms",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "SetPasswordForm",
+        "importPath": "django.contrib.auth.forms",
+        "description": "django.contrib.auth.forms",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetForm",
+        "importPath": "django.contrib.auth.forms",
+        "description": "django.contrib.auth.forms",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "django.contrib.auth.decorators",
+        "description": "django.contrib.auth.decorators",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "django.contrib.auth.decorators",
+        "description": "django.contrib.auth.decorators",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_model",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "logout",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "authenticate",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "views",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_model",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "logout",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "authenticate",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "default_token_generator",
+        "importPath": "django.contrib.auth.tokens",
+        "description": "django.contrib.auth.tokens",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.tokens",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "send_mail",
+        "importPath": "django.core.mail",
+        "description": "django.core.mail",
+        "isExtraImport": true,
+        "detail": "django.core.mail",
+        "documentation": {}
+    },
+    {
+        "label": "render_to_string",
+        "importPath": "django.template.loader",
+        "description": "django.template.loader",
+        "isExtraImport": true,
+        "detail": "django.template.loader",
+        "documentation": {}
+    },
+    {
+        "label": "get_template",
+        "importPath": "django.template.loader",
+        "description": "django.template.loader",
+        "isExtraImport": true,
+        "detail": "django.template.loader",
+        "documentation": {}
+    },
+    {
+        "label": "urlsafe_base64_encode",
+        "importPath": "django.utils.http",
+        "description": "django.utils.http",
+        "isExtraImport": true,
+        "detail": "django.utils.http",
+        "documentation": {}
+    },
+    {
+        "label": "urlsafe_base64_decode",
+        "importPath": "django.utils.http",
+        "description": "django.utils.http",
+        "isExtraImport": true,
+        "detail": "django.utils.http",
+        "documentation": {}
+    },
+    {
+        "label": "force_bytes",
+        "importPath": "django.utils.encoding",
+        "description": "django.utils.encoding",
+        "isExtraImport": true,
+        "detail": "django.utils.encoding",
+        "documentation": {}
+    },
+    {
+        "label": "gettext_lazy",
+        "importPath": "django.utils.translation",
+        "description": "django.utils.translation",
+        "isExtraImport": true,
+        "detail": "django.utils.translation",
+        "documentation": {}
+    },
+    {
+        "label": "View",
+        "importPath": "django.views",
+        "description": "django.views",
+        "isExtraImport": true,
+        "detail": "django.views",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "temp_car.models",
+        "description": "temp_car.models",
+        "isExtraImport": true,
+        "detail": "temp_car.models",
+        "documentation": {}
+    },
+    {
+        "label": "ControlMonitoreo",
+        "importPath": "temp_car.models",
+        "description": "temp_car.models",
+        "isExtraImport": true,
+        "detail": "temp_car.models",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "temp_car.forms",
+        "description": "temp_car.forms",
+        "isExtraImport": true,
+        "detail": "temp_car.forms",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "temp_car.user.users_views",
+        "description": "temp_car.user.users_views",
+        "isExtraImport": true,
+        "detail": "temp_car.user.users_views",
+        "documentation": {}
+    },
+    {
+        "label": "Paginator",
+        "importPath": "django.core.paginator",
+        "description": "django.core.paginator",
+        "isExtraImport": true,
+        "detail": "django.core.paginator",
+        "documentation": {}
+    },
+    {
+        "label": "EmptyPage",
+        "importPath": "django.core.paginator",
+        "description": "django.core.paginator",
+        "isExtraImport": true,
+        "detail": "django.core.paginator",
+        "documentation": {}
+    },
+    {
+        "label": "PageNotAnInteger",
+        "importPath": "django.core.paginator",
+        "description": "django.core.paginator",
+        "isExtraImport": true,
+        "detail": "django.core.paginator",
+        "documentation": {}
+    },
+    {
+        "label": "csrf_exempt",
+        "importPath": "django.views.decorators.csrf",
+        "description": "django.views.decorators.csrf",
+        "isExtraImport": true,
+        "detail": "django.views.decorators.csrf",
+        "documentation": {}
+    },
+    {
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "pisa",
+        "importPath": "xhtml2pdf",
+        "description": "xhtml2pdf",
+        "isExtraImport": true,
+        "detail": "xhtml2pdf",
+        "documentation": {}
+    },
+    {
+        "label": "BytesIO",
+        "importPath": "io",
+        "description": "io",
+        "isExtraImport": true,
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "urllib.parse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
+        "label": "checkingMorning",
+        "importPath": "temp_car.utils.monitorChecking",
+        "description": "temp_car.utils.monitorChecking",
+        "isExtraImport": true,
+        "detail": "temp_car.utils.monitorChecking",
+        "documentation": {}
+    },
+    {
+        "label": "checkingAfternoon",
+        "importPath": "temp_car.utils.monitorChecking",
+        "description": "temp_car.utils.monitorChecking",
+        "isExtraImport": true,
+        "detail": "temp_car.utils.monitorChecking",
+        "documentation": {}
+    },
+    {
+        "label": "checkHoursMorning",
+        "importPath": "temp_car.utils.monitorChecking",
+        "description": "temp_car.utils.monitorChecking",
+        "isExtraImport": true,
+        "detail": "temp_car.utils.monitorChecking",
+        "documentation": {}
+    },
+    {
+        "label": "checkHoursAfternoon",
+        "importPath": "temp_car.utils.monitorChecking",
+        "description": "temp_car.utils.monitorChecking",
+        "isExtraImport": true,
+        "detail": "temp_car.utils.monitorChecking",
+        "documentation": {}
+    },
+    {
+        "label": "checkDate",
+        "importPath": "temp_car.utils.monitorChecking",
+        "description": "temp_car.utils.monitorChecking",
+        "isExtraImport": true,
+        "detail": "temp_car.utils.monitorChecking",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.asgi",
+        "description": "cardiaco_vaca.cardiaco_vaca.asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "cardiaco_vaca.cardiaco_vaca.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-gse7w_va40r(70@*(*6x*1th%+1gzr53sdrk+@y&=w6idwm*g@'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['*']\nLOGIN_REDIRECT_URL = ('dashboard_redirect')\nLOGOUT_REDIRECT_URL = ('login')",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-gse7w_va40r(70@*(*6x*1th%+1gzr53sdrk+@y&=w6idwm*g@'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['*']\nLOGIN_REDIRECT_URL = ('dashboard_redirect')\nLOGOUT_REDIRECT_URL = ('login')\nSESSION_COOKIE_AGE = 1800  # Duración de la sesión en segundos (media hora)\n#handler404 = 'temp_car.views.error_404_view'\nCORS_ALLOW_ALL_ORIGINS = True\n# Opcional: especificar métodos permitidos (por defecto ya permite estos métodos)",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = ['*']\nLOGIN_REDIRECT_URL = ('dashboard_redirect')\nLOGOUT_REDIRECT_URL = ('login')\nSESSION_COOKIE_AGE = 1800  # Duración de la sesión en segundos (media hora)\n#handler404 = 'temp_car.views.error_404_view'\nCORS_ALLOW_ALL_ORIGINS = True\n# Opcional: especificar métodos permitidos (por defecto ya permite estos métodos)\nCORS_ALLOW_METHODS = [\n    \"DELETE\",",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "ALLOWED_HOSTS = ['*']\nLOGIN_REDIRECT_URL = ('dashboard_redirect')\nLOGOUT_REDIRECT_URL = ('login')\nSESSION_COOKIE_AGE = 1800  # Duración de la sesión en segundos (media hora)\n#handler404 = 'temp_car.views.error_404_view'\nCORS_ALLOW_ALL_ORIGINS = True\n# Opcional: especificar métodos permitidos (por defecto ya permite estos métodos)\nCORS_ALLOW_METHODS = [\n    \"DELETE\",\n    \"GET\",",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LOGIN_REDIRECT_URL",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "LOGIN_REDIRECT_URL = ('dashboard_redirect')\nLOGOUT_REDIRECT_URL = ('login')\nSESSION_COOKIE_AGE = 1800  # Duración de la sesión en segundos (media hora)\n#handler404 = 'temp_car.views.error_404_view'\nCORS_ALLOW_ALL_ORIGINS = True\n# Opcional: especificar métodos permitidos (por defecto ya permite estos métodos)\nCORS_ALLOW_METHODS = [\n    \"DELETE\",\n    \"GET\",\n    \"OPTIONS\",",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LOGOUT_REDIRECT_URL",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "LOGOUT_REDIRECT_URL = ('login')\nSESSION_COOKIE_AGE = 1800  # Duración de la sesión en segundos (media hora)\n#handler404 = 'temp_car.views.error_404_view'\nCORS_ALLOW_ALL_ORIGINS = True\n# Opcional: especificar métodos permitidos (por defecto ya permite estos métodos)\nCORS_ALLOW_METHODS = [\n    \"DELETE\",\n    \"GET\",\n    \"OPTIONS\",\n    \"PATCH\",",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SESSION_COOKIE_AGE",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "SESSION_COOKIE_AGE = 1800  # Duración de la sesión en segundos (media hora)\n#handler404 = 'temp_car.views.error_404_view'\nCORS_ALLOW_ALL_ORIGINS = True\n# Opcional: especificar métodos permitidos (por defecto ya permite estos métodos)\nCORS_ALLOW_METHODS = [\n    \"DELETE\",\n    \"GET\",\n    \"OPTIONS\",\n    \"PATCH\",\n    \"POST\",",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#handler404",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "#handler404 = 'temp_car.views.error_404_view'\nCORS_ALLOW_ALL_ORIGINS = True\n# Opcional: especificar métodos permitidos (por defecto ya permite estos métodos)\nCORS_ALLOW_METHODS = [\n    \"DELETE\",\n    \"GET\",\n    \"OPTIONS\",\n    \"PATCH\",\n    \"POST\",\n    \"PUT\",",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOW_ALL_ORIGINS",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "CORS_ALLOW_ALL_ORIGINS = True\n# Opcional: especificar métodos permitidos (por defecto ya permite estos métodos)\nCORS_ALLOW_METHODS = [\n    \"DELETE\",\n    \"GET\",\n    \"OPTIONS\",\n    \"PATCH\",\n    \"POST\",\n    \"PUT\",\n]",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOW_METHODS",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "CORS_ALLOW_METHODS = [\n    \"DELETE\",\n    \"GET\",\n    \"OPTIONS\",\n    \"PATCH\",\n    \"POST\",\n    \"PUT\",\n]\n# Opcional: especificar encabezados permitidos (por defecto ya permite estos encabezados)\nCORS_ALLOW_HEADERS = [",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOW_HEADERS",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "CORS_ALLOW_HEADERS = [\n    \"accept\",\n    \"accept-encoding\",\n    \"authorization\",\n    \"content-type\",\n    \"dnt\",\n    \"origin\",\n    \"user-agent\",\n    \"x-csrftoken\",\n    \"x-requested-with\",",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#AUTH_USER_MODEL",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "#AUTH_USER_MODEL = 'temp_car.CustomUser'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'temp_car',",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'temp_car',\n    'django_bootstrap5',\n    'corsheaders',",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n    'corsheaders.middleware.CorsMiddleware',\n    'django.middleware.common.CommonMiddleware',",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "ROOT_URLCONF = 'cardiaco_vaca.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [\n            os.path.join(BASE_DIR, 'temp_car/templates'),  # Añade esta línea\n        ],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [\n            os.path.join(BASE_DIR, 'temp_car/templates'),  # Añade esta línea\n        ],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "WSGI_APPLICATION = 'cardiaco_vaca.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/4.2/ref/settings/#databases\n\"\"\"DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\"\"\"\nDATABASES = {",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "\"\"\"DATABASES",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "\"\"\"DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\"\"\"\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.mysql',  # Motor para MySQL/MariaDB\n        'NAME': 'bovinos_unl',  # Nombre de tu base de datos",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.mysql',  # Motor para MySQL/MariaDB\n        'NAME': 'bovinos_unl',  # Nombre de tu base de datos\n        'USER': 'radius_ncs',  # Usuario de la base de datos\n        'PASSWORD': 'tics_ncs',  # Contraseña del usuario\n        'HOST': '190.96.96.20',  # Dirección del servidor MySQL (localhost o IP)\n        'PORT': '3306',  # Puerto de MySQL (3306 por defecto)\n        ## Para pruebas despues de la reunion\n        #'OPTIONS': {",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "LANGUAGE_CODE = 'es-ec'\nTIME_ZONE = 'America/Guayaquil'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'temp_car/static'),  # Usa barras normales y elimina las barras invertidas\n]",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "TIME_ZONE = 'America/Guayaquil'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'temp_car/static'),  # Usa barras normales y elimina las barras invertidas\n]\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Directorio para collectstatic",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'temp_car/static'),  # Usa barras normales y elimina las barras invertidas\n]\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Directorio para collectstatic\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media\")",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'temp_car/static'),  # Usa barras normales y elimina las barras invertidas\n]\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Directorio para collectstatic\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media\")\nMEDIA_URL = '/media/'",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "STATIC_URL = '/static/'\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'temp_car/static'),  # Usa barras normales y elimina las barras invertidas\n]\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Directorio para collectstatic\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media\")\nMEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATICFILES_DIRS",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "STATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'temp_car/static'),  # Usa barras normales y elimina las barras invertidas\n]\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Directorio para collectstatic\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media\")\nMEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nfrom django.contrib.messages import constants as message_constants",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_ROOT",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Directorio para collectstatic\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media\")\nMEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nfrom django.contrib.messages import constants as message_constants\nMESSAGE_LEVEL = message_constants.DEBUG\nAUTHENTICATION_BACKENDS = [\n    'django.contrib.auth.backends.ModelBackend',",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_ROOT",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, \"media\")\nMEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nfrom django.contrib.messages import constants as message_constants\nMESSAGE_LEVEL = message_constants.DEBUG\nAUTHENTICATION_BACKENDS = [\n    'django.contrib.auth.backends.ModelBackend',\n]",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_URL",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "MEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nfrom django.contrib.messages import constants as message_constants\nMESSAGE_LEVEL = message_constants.DEBUG\nAUTHENTICATION_BACKENDS = [\n    'django.contrib.auth.backends.ModelBackend',\n]\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nfrom django.contrib.messages import constants as message_constants\nMESSAGE_LEVEL = message_constants.DEBUG\nAUTHENTICATION_BACKENDS = [\n    'django.contrib.auth.backends.ModelBackend',\n]\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = 'smtp.gmail.com'\nEMAIL_PORT = 587\nEMAIL_USE_TLS = True",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MESSAGE_LEVEL",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "MESSAGE_LEVEL = message_constants.DEBUG\nAUTHENTICATION_BACKENDS = [\n    'django.contrib.auth.backends.ModelBackend',\n]\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = 'smtp.gmail.com'\nEMAIL_PORT = 587\nEMAIL_USE_TLS = True\nEMAIL_HOST_USER = 'vacauniversidad@gmail.com'\nEMAIL_HOST_PASSWORD = 'nydandvfcibguwhf'",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTHENTICATION_BACKENDS",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "AUTHENTICATION_BACKENDS = [\n    'django.contrib.auth.backends.ModelBackend',\n]\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = 'smtp.gmail.com'\nEMAIL_PORT = 587\nEMAIL_USE_TLS = True\nEMAIL_HOST_USER = 'vacauniversidad@gmail.com'\nEMAIL_HOST_PASSWORD = 'nydandvfcibguwhf'\nSITE_ID = 1  # Reemplaza 1 con el ID de tu sitio",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_BACKEND",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = 'smtp.gmail.com'\nEMAIL_PORT = 587\nEMAIL_USE_TLS = True\nEMAIL_HOST_USER = 'vacauniversidad@gmail.com'\nEMAIL_HOST_PASSWORD = 'nydandvfcibguwhf'\nSITE_ID = 1  # Reemplaza 1 con el ID de tu sitio\nDEFAULT_FROM_EMAIL = 'vacauniversidad@gmail.com'  # Reemplaza con tu dirección de correo",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "EMAIL_HOST = 'smtp.gmail.com'\nEMAIL_PORT = 587\nEMAIL_USE_TLS = True\nEMAIL_HOST_USER = 'vacauniversidad@gmail.com'\nEMAIL_HOST_PASSWORD = 'nydandvfcibguwhf'\nSITE_ID = 1  # Reemplaza 1 con el ID de tu sitio\nDEFAULT_FROM_EMAIL = 'vacauniversidad@gmail.com'  # Reemplaza con tu dirección de correo",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_PORT",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "EMAIL_PORT = 587\nEMAIL_USE_TLS = True\nEMAIL_HOST_USER = 'vacauniversidad@gmail.com'\nEMAIL_HOST_PASSWORD = 'nydandvfcibguwhf'\nSITE_ID = 1  # Reemplaza 1 con el ID de tu sitio\nDEFAULT_FROM_EMAIL = 'vacauniversidad@gmail.com'  # Reemplaza con tu dirección de correo",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_USE_TLS",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "EMAIL_USE_TLS = True\nEMAIL_HOST_USER = 'vacauniversidad@gmail.com'\nEMAIL_HOST_PASSWORD = 'nydandvfcibguwhf'\nSITE_ID = 1  # Reemplaza 1 con el ID de tu sitio\nDEFAULT_FROM_EMAIL = 'vacauniversidad@gmail.com'  # Reemplaza con tu dirección de correo",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_USER",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "EMAIL_HOST_USER = 'vacauniversidad@gmail.com'\nEMAIL_HOST_PASSWORD = 'nydandvfcibguwhf'\nSITE_ID = 1  # Reemplaza 1 con el ID de tu sitio\nDEFAULT_FROM_EMAIL = 'vacauniversidad@gmail.com'  # Reemplaza con tu dirección de correo",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_PASSWORD",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "EMAIL_HOST_PASSWORD = 'nydandvfcibguwhf'\nSITE_ID = 1  # Reemplaza 1 con el ID de tu sitio\nDEFAULT_FROM_EMAIL = 'vacauniversidad@gmail.com'  # Reemplaza con tu dirección de correo",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SITE_ID",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "SITE_ID = 1  # Reemplaza 1 con el ID de tu sitio\nDEFAULT_FROM_EMAIL = 'vacauniversidad@gmail.com'  # Reemplaza con tu dirección de correo",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_FROM_EMAIL",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.settings",
+        "description": "cardiaco_vaca.cardiaco_vaca.settings",
+        "peekOfCode": "DEFAULT_FROM_EMAIL = 'vacauniversidad@gmail.com'  # Reemplaza con tu dirección de correo",
+        "detail": "cardiaco_vaca.cardiaco_vaca.settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.urls",
+        "description": "cardiaco_vaca.cardiaco_vaca.urls",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('temp_car.urls')),\n    path('accounts/', include('django.contrib.auth.urls')),\n]\nif settings.DEBUG:\n   urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\n#handler404 = error_404_view",
+        "detail": "cardiaco_vaca.cardiaco_vaca.urls",
+        "documentation": {}
+    },
+    {
+        "label": "#handler404",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.urls",
+        "description": "cardiaco_vaca.cardiaco_vaca.urls",
+        "peekOfCode": "#handler404 = error_404_view",
+        "detail": "cardiaco_vaca.cardiaco_vaca.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.cardiaco_vaca.wsgi",
+        "description": "cardiaco_vaca.cardiaco_vaca.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "cardiaco_vaca.cardiaco_vaca.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "NotFoundMiddleware",
+        "kind": 6,
+        "importPath": "cardiaco_vaca.temp_car.middleware.NotFound",
+        "description": "cardiaco_vaca.temp_car.middleware.NotFound",
+        "peekOfCode": "class NotFoundMiddleware:\n    def __init__(self, get_response):\n        self.get_response = get_response\n    def __call__(self, request):\n        response = self.get_response(request)\n        # Verificar si la respuesta es un 404\n        if response.status_code == 404:\n            return self.handle_not_found(request)\n        # Verificar si la URL contiene '/accounts/login/' y 'next' en los parámetros GET\n        if '/accounts/login/' in request.path and 'next' in request.GET:",
+        "detail": "cardiaco_vaca.temp_car.middleware.NotFound",
+        "documentation": {}
+    },
+    {
+        "label": "SessionTimeoutMiddleware",
+        "kind": 6,
+        "importPath": "cardiaco_vaca.temp_car.middleware.SessionTimeout",
+        "description": "cardiaco_vaca.temp_car.middleware.SessionTimeout",
+        "peekOfCode": "class SessionTimeoutMiddleware:\n    def __init__(self, get_response):\n        self.get_response = get_response\n    def __call__(self, request):\n        # Llama a la vista y obtén la respuesta\n        response = self.get_response(request)\n        # Verifica si la sesión del usuario está activa\n        if request.user.is_authenticated:\n            last_activity = request.session.get('last_activity')\n            # Convierte la hora actual a una cadena ISO 8601",
+        "detail": "cardiaco_vaca.temp_car.middleware.SessionTimeout",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "cardiaco_vaca.temp_car.migrations.0001_initial",
+        "description": "cardiaco_vaca.temp_car.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n    ]\n    operations = [\n    ]",
+        "detail": "cardiaco_vaca.temp_car.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "cardiaco_vaca.temp_car.migrations.0002_initial",
+        "description": "cardiaco_vaca.temp_car.migrations.0002_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('temp_car', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Bovinos',\n            fields=[\n                ('id_Bovinos', models.AutoField(primary_key=True, serialize=False)),",
+        "detail": "cardiaco_vaca.temp_car.migrations.0002_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "cardiaco_vaca.temp_car.migrations.0003_delete_medicioncompleto",
+        "description": "cardiaco_vaca.temp_car.migrations.0003_delete_medicioncompleto",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('temp_car', '0002_initial'),\n    ]\n    operations = [\n        migrations.DeleteModel(\n            name='MedicionCompleto',\n        ),\n    ]",
+        "detail": "cardiaco_vaca.temp_car.migrations.0003_delete_medicioncompleto",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "cardiaco_vaca.temp_car.migrations.0004_controlmonitoreo",
+        "description": "cardiaco_vaca.temp_car.migrations.0004_controlmonitoreo",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('temp_car', '0003_delete_medicioncompleto'),\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='ControlMonitoreo',\n            fields=[\n                ('id_Control', models.AutoField(primary_key=True, serialize=False)),",
+        "detail": "cardiaco_vaca.temp_car.migrations.0004_controlmonitoreo",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "cardiaco_vaca.temp_car.migrations.0005_auto_20250317_1425",
+        "description": "cardiaco_vaca.temp_car.migrations.0005_auto_20250317_1425",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('temp_car', '0004_controlmonitoreo'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='personalinfo',\n            name='id',\n            field=models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID'),\n        ),",
+        "detail": "cardiaco_vaca.temp_car.migrations.0005_auto_20250317_1425",
+        "documentation": {}
+    },
+    {
+        "label": "CustomPasswordResetView",
+        "kind": 6,
+        "importPath": "cardiaco_vaca.temp_car.user.users_views",
+        "description": "cardiaco_vaca.temp_car.user.users_views",
+        "peekOfCode": "class CustomPasswordResetView(View):\n    template_name = 'appMonitor/resetPassword/password_reset_form.html'\n    def get(self, request):\n        form = PasswordResetForm()\n        return render(request, self.template_name, {'form': form})\n    def post(self, request):\n        form = PasswordResetForm(request.POST)\n        print(\"Entro aqui\")\n        if form.is_valid():\n            email = form.cleaned_data['email']",
+        "detail": "cardiaco_vaca.temp_car.user.users_views",
+        "documentation": {}
+    },
+    {
+        "label": "ResetPasswordDoneView",
+        "kind": 6,
+        "importPath": "cardiaco_vaca.temp_car.user.users_views",
+        "description": "cardiaco_vaca.temp_car.user.users_views",
+        "peekOfCode": "class ResetPasswordDoneView(View):\n    template_name = 'appMonitor/resetPassword/password_reset_done.html'\n    def get(self, request):\n        return render(request, self.template_name)\nclass CustomPasswordResetConfirmView(View):\n    template_name = 'appMonitor/resetPassword/password_reset_confirm.html'\n    def get(self, request, uidb64=None, token=None):\n        try:\n            uid = urlsafe_base64_decode(uidb64).decode()\n            user = User.objects.get(pk=uid)",
+        "detail": "cardiaco_vaca.temp_car.user.users_views",
+        "documentation": {}
+    },
+    {
+        "label": "CustomPasswordResetConfirmView",
+        "kind": 6,
+        "importPath": "cardiaco_vaca.temp_car.user.users_views",
+        "description": "cardiaco_vaca.temp_car.user.users_views",
+        "peekOfCode": "class CustomPasswordResetConfirmView(View):\n    template_name = 'appMonitor/resetPassword/password_reset_confirm.html'\n    def get(self, request, uidb64=None, token=None):\n        try:\n            uid = urlsafe_base64_decode(uidb64).decode()\n            user = User.objects.get(pk=uid)\n            if default_token_generator.check_token(user, token):\n                form = SetPasswordForm(user)\n                return render(request, self.template_name, {\n                    'form': form,",
+        "detail": "cardiaco_vaca.temp_car.user.users_views",
+        "documentation": {}
+    },
+    {
+        "label": "ResetPasswordCompleteView",
+        "kind": 6,
+        "importPath": "cardiaco_vaca.temp_car.user.users_views",
+        "description": "cardiaco_vaca.temp_car.user.users_views",
+        "peekOfCode": "class ResetPasswordCompleteView(View):\n    template_name = 'appMonitor/resetPassword/password_reset_complete.html'\n    def get(self, request):\n        return render(request, self.template_name)",
+        "detail": "cardiaco_vaca.temp_car.user.users_views",
+        "documentation": {}
+    },
+    {
+        "label": "user_login",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.user.users_views",
+        "description": "cardiaco_vaca.temp_car.user.users_views",
+        "peekOfCode": "def user_login(request):\n    if request.method == 'POST':\n        username = request.POST.get('username')\n        password = request.POST.get('password')\n        user = authenticate(request, username=username, password=password)\n        if user is not None:\n            login(request, user)\n            return redirect('monitoreo_actual')\n        else:\n            messages.error(request, 'Credenciales inválidas. Inténtalo nuevamente.')",
+        "detail": "cardiaco_vaca.temp_car.user.users_views",
+        "documentation": {}
+    },
+    {
+        "label": "user_logout",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.user.users_views",
+        "description": "cardiaco_vaca.temp_car.user.users_views",
+        "peekOfCode": "def user_logout(request): \n    logout(request)\n    return redirect('/')\ndef crear_usuario(request):\n    if request.method == 'POST':\n        form = PersonalInfoForm(request.POST)\n        if form.is_valid():\n            #Ahora se crea el usuario con el modelo CustomUserManager\n            user = get_user_model().objects.create_user(\n                username=form.cleaned_data['email'],",
+        "detail": "cardiaco_vaca.temp_car.user.users_views",
+        "documentation": {}
+    },
+    {
+        "label": "crear_usuario",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.user.users_views",
+        "description": "cardiaco_vaca.temp_car.user.users_views",
+        "peekOfCode": "def crear_usuario(request):\n    if request.method == 'POST':\n        form = PersonalInfoForm(request.POST)\n        if form.is_valid():\n            #Ahora se crea el usuario con el modelo CustomUserManager\n            user = get_user_model().objects.create_user(\n                username=form.cleaned_data['email'],\n                email=form.cleaned_data['email'],\n                password=form.cleaned_data['cedula'],\n                first_name=form.cleaned_data['nombre'],",
+        "detail": "cardiaco_vaca.temp_car.user.users_views",
+        "documentation": {}
+    },
+    {
+        "label": "listar_usuario",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.user.users_views",
+        "description": "cardiaco_vaca.temp_car.user.users_views",
+        "peekOfCode": "def listar_usuario(request):\n    usuarios = {}\n    usuario_queryset = User.objects.all()\n    profile_queryset = PersonalInfo.objects.all()\n    for user in usuario_queryset:\n        #sino esta en el staff no se muestra\n        if  user.is_superuser == True:\n            continue\n        else:\n            profile = profile_queryset.filter(email=user.email).first()",
+        "detail": "cardiaco_vaca.temp_car.user.users_views",
+        "documentation": {}
+    },
+    {
+        "label": "desactivar_usuario",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.user.users_views",
+        "description": "cardiaco_vaca.temp_car.user.users_views",
+        "peekOfCode": "def desactivar_usuario(request, usuario_id):\n    usuario = get_object_or_404(User, id=usuario_id)\n    if usuario.is_active:\n        usuario.is_active = False\n        messages.error(request, f'Usuario {usuario.username} desactivado correctamente.')\n    else:\n        usuario.is_active = True\n        messages.success(request, f'Usuario {usuario.username} activado correctamente.')\n    usuario.save()\n    return redirect('gestion')",
+        "detail": "cardiaco_vaca.temp_car.user.users_views",
+        "documentation": {}
+    },
+    {
+        "label": "editar_usuario",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.user.users_views",
+        "description": "cardiaco_vaca.temp_car.user.users_views",
+        "peekOfCode": "def editar_usuario(request, user_id):\n    user = get_object_or_404(User, id=user_id)\n    profile = get_object_or_404(PersonalInfo, email=user.email)\n    if request.method == 'POST':\n        personal_info_form = EditPersonalInfoForm(request.POST, instance=profile)\n        user_form = EditUserForm(request.POST, instance=user)\n        if personal_info_form.is_valid() and user_form.is_valid():\n            personal_info_form.save()\n            user.email = personal_info_form.cleaned_data['email']\n            user.username = personal_info_form.cleaned_data['email']",
+        "detail": "cardiaco_vaca.temp_car.user.users_views",
+        "documentation": {}
+    },
+    {
+        "label": "getDate",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.utils.getHours",
+        "description": "cardiaco_vaca.temp_car.utils.getHours",
+        "peekOfCode": "def getDate():\n    now = datetime.now()\n    now_ecuador = now.astimezone(ecuador)\n    return now_ecuador.date()\ndef getTime():\n    now = datetime.now()\n    now_ecuador = now.astimezone(ecuador)\n    return now_ecuador.time()",
+        "detail": "cardiaco_vaca.temp_car.utils.getHours",
+        "documentation": {}
+    },
+    {
+        "label": "getTime",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.utils.getHours",
+        "description": "cardiaco_vaca.temp_car.utils.getHours",
+        "peekOfCode": "def getTime():\n    now = datetime.now()\n    now_ecuador = now.astimezone(ecuador)\n    return now_ecuador.time()",
+        "detail": "cardiaco_vaca.temp_car.utils.getHours",
+        "documentation": {}
+    },
+    {
+        "label": "ecuador",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.temp_car.utils.getHours",
+        "description": "cardiaco_vaca.temp_car.utils.getHours",
+        "peekOfCode": "ecuador = timezone.get_fixed_timezone(-5*60)\ndef getDate():\n    now = datetime.now()\n    now_ecuador = now.astimezone(ecuador)\n    return now_ecuador.date()\ndef getTime():\n    now = datetime.now()\n    now_ecuador = now.astimezone(ecuador)\n    return now_ecuador.time()",
+        "detail": "cardiaco_vaca.temp_car.utils.getHours",
+        "documentation": {}
+    },
+    {
+        "label": "correo_registrado",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.utils.loginCheck",
+        "description": "cardiaco_vaca.temp_car.utils.loginCheck",
+        "peekOfCode": "def correo_registrado(correo):\n    from django.contrib.auth.models import User\n    try:\n        User.objects.get(email=correo)\n        return True\n    except User.DoesNotExist:\n        return False\ndef es_Admin(user):\n    return user.groups.filter(name='Admin').exists()\ndef es_User(user):",
+        "detail": "cardiaco_vaca.temp_car.utils.loginCheck",
+        "documentation": {}
+    },
+    {
+        "label": "es_Admin",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.utils.loginCheck",
+        "description": "cardiaco_vaca.temp_car.utils.loginCheck",
+        "peekOfCode": "def es_Admin(user):\n    return user.groups.filter(name='Admin').exists()\ndef es_User(user):\n    return user.groups.filter(name='User').exists()",
+        "detail": "cardiaco_vaca.temp_car.utils.loginCheck",
+        "documentation": {}
+    },
+    {
+        "label": "es_User",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.utils.loginCheck",
+        "description": "cardiaco_vaca.temp_car.utils.loginCheck",
+        "peekOfCode": "def es_User(user):\n    return user.groups.filter(name='User').exists()",
+        "detail": "cardiaco_vaca.temp_car.utils.loginCheck",
+        "documentation": {}
+    },
+    {
+        "label": "usuario_en_staff",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.temp_car.utils.loginCheck",
+        "description": "cardiaco_vaca.temp_car.utils.loginCheck",
+        "peekOfCode": "usuario_en_staff = False\n#Funcion para verificar si el correo del usuario está registrado \ndef correo_registrado(correo):\n    from django.contrib.auth.models import User\n    try:\n        User.objects.get(email=correo)\n        return True\n    except User.DoesNotExist:\n        return False\ndef es_Admin(user):",
+        "detail": "cardiaco_vaca.temp_car.utils.loginCheck",
+        "documentation": {}
+    },
+    {
+        "label": "checkingMorning",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "description": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "peekOfCode": "def checkingMorning(idBovino):\n    controlesMorning = ControlMonitoreo.objects.filter(\n        fecha_lectura=fecha_actual,\n        id_Lectura__id_Bovino=idBovino,\n        hora_lectura__range=(startMorning.time(), endMorning.time())\n    ).count()\n    return controlesMorning == 0\ndef checkingAfternoon(idBovino):\n    controlesAfternoon = ControlMonitoreo.objects.filter(\n        id_Lectura__id_Bovino=idBovino,",
+        "detail": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "documentation": {}
+    },
+    {
+        "label": "checkingAfternoon",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "description": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "peekOfCode": "def checkingAfternoon(idBovino):\n    controlesAfternoon = ControlMonitoreo.objects.filter(\n        id_Lectura__id_Bovino=idBovino,\n        fecha_lectura=fecha_actual,\n        hora_lectura__range=(startAfternoon.time(), endAfternoon.time())\n    ).count()\n    return controlesAfternoon == 0\ndef checkHoursMorning(timeNow):\n    return startMorning.time() <= timeNow <= endMorning.time()\ndef checkHoursAfternoon(timeNow):",
+        "detail": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "documentation": {}
+    },
+    {
+        "label": "checkHoursMorning",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "description": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "peekOfCode": "def checkHoursMorning(timeNow):\n    return startMorning.time() <= timeNow <= endMorning.time()\ndef checkHoursAfternoon(timeNow):\n    return startAfternoon.time() <= timeNow <= endAfternoon.time()\ndef checkDate(dateNow):\n    return dateNow == fecha_actual",
+        "detail": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "documentation": {}
+    },
+    {
+        "label": "checkHoursAfternoon",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "description": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "peekOfCode": "def checkHoursAfternoon(timeNow):\n    return startAfternoon.time() <= timeNow <= endAfternoon.time()\ndef checkDate(dateNow):\n    return dateNow == fecha_actual",
+        "detail": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "documentation": {}
+    },
+    {
+        "label": "checkDate",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "description": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "peekOfCode": "def checkDate(dateNow):\n    return dateNow == fecha_actual",
+        "detail": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "documentation": {}
+    },
+    {
+        "label": "fecha_actual",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "description": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "peekOfCode": "fecha_actual = datetime.now().date()\nhora_actual = time(10, 0)\n# Calcular los rangos de tiempo para la mañana y la tarde\nstartMorning = datetime.combine(fecha_actual, time(hour=7, minute=0))\nendMorning = datetime.combine(fecha_actual, time(hour=12, minute=0))\nstartAfternoon = datetime.combine(fecha_actual, time(hour=13, minute=0))\nendAfternoon = datetime.combine(fecha_actual, time(hour=18, minute=0))\ndef checkingMorning(idBovino):\n    controlesMorning = ControlMonitoreo.objects.filter(\n        fecha_lectura=fecha_actual,",
+        "detail": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "documentation": {}
+    },
+    {
+        "label": "hora_actual",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "description": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "peekOfCode": "hora_actual = time(10, 0)\n# Calcular los rangos de tiempo para la mañana y la tarde\nstartMorning = datetime.combine(fecha_actual, time(hour=7, minute=0))\nendMorning = datetime.combine(fecha_actual, time(hour=12, minute=0))\nstartAfternoon = datetime.combine(fecha_actual, time(hour=13, minute=0))\nendAfternoon = datetime.combine(fecha_actual, time(hour=18, minute=0))\ndef checkingMorning(idBovino):\n    controlesMorning = ControlMonitoreo.objects.filter(\n        fecha_lectura=fecha_actual,\n        id_Lectura__id_Bovino=idBovino,",
+        "detail": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "documentation": {}
+    },
+    {
+        "label": "startMorning",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "description": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "peekOfCode": "startMorning = datetime.combine(fecha_actual, time(hour=7, minute=0))\nendMorning = datetime.combine(fecha_actual, time(hour=12, minute=0))\nstartAfternoon = datetime.combine(fecha_actual, time(hour=13, minute=0))\nendAfternoon = datetime.combine(fecha_actual, time(hour=18, minute=0))\ndef checkingMorning(idBovino):\n    controlesMorning = ControlMonitoreo.objects.filter(\n        fecha_lectura=fecha_actual,\n        id_Lectura__id_Bovino=idBovino,\n        hora_lectura__range=(startMorning.time(), endMorning.time())\n    ).count()",
+        "detail": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "documentation": {}
+    },
+    {
+        "label": "endMorning",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "description": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "peekOfCode": "endMorning = datetime.combine(fecha_actual, time(hour=12, minute=0))\nstartAfternoon = datetime.combine(fecha_actual, time(hour=13, minute=0))\nendAfternoon = datetime.combine(fecha_actual, time(hour=18, minute=0))\ndef checkingMorning(idBovino):\n    controlesMorning = ControlMonitoreo.objects.filter(\n        fecha_lectura=fecha_actual,\n        id_Lectura__id_Bovino=idBovino,\n        hora_lectura__range=(startMorning.time(), endMorning.time())\n    ).count()\n    return controlesMorning == 0",
+        "detail": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "documentation": {}
+    },
+    {
+        "label": "startAfternoon",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "description": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "peekOfCode": "startAfternoon = datetime.combine(fecha_actual, time(hour=13, minute=0))\nendAfternoon = datetime.combine(fecha_actual, time(hour=18, minute=0))\ndef checkingMorning(idBovino):\n    controlesMorning = ControlMonitoreo.objects.filter(\n        fecha_lectura=fecha_actual,\n        id_Lectura__id_Bovino=idBovino,\n        hora_lectura__range=(startMorning.time(), endMorning.time())\n    ).count()\n    return controlesMorning == 0\ndef checkingAfternoon(idBovino):",
+        "detail": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "documentation": {}
+    },
+    {
+        "label": "endAfternoon",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "description": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "peekOfCode": "endAfternoon = datetime.combine(fecha_actual, time(hour=18, minute=0))\ndef checkingMorning(idBovino):\n    controlesMorning = ControlMonitoreo.objects.filter(\n        fecha_lectura=fecha_actual,\n        id_Lectura__id_Bovino=idBovino,\n        hora_lectura__range=(startMorning.time(), endMorning.time())\n    ).count()\n    return controlesMorning == 0\ndef checkingAfternoon(idBovino):\n    controlesAfternoon = ControlMonitoreo.objects.filter(",
+        "detail": "cardiaco_vaca.temp_car.utils.monitorChecking",
+        "documentation": {}
+    },
+    {
+        "label": "TempCarConfig",
+        "kind": 6,
+        "importPath": "cardiaco_vaca.temp_car.apps",
+        "description": "cardiaco_vaca.temp_car.apps",
+        "peekOfCode": "class TempCarConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'temp_car'",
+        "detail": "cardiaco_vaca.temp_car.apps",
+        "documentation": {}
+    },
+    {
+        "label": "PersonalInfoForm",
+        "kind": 6,
+        "importPath": "cardiaco_vaca.temp_car.forms",
+        "description": "cardiaco_vaca.temp_car.forms",
+        "peekOfCode": "class PersonalInfoForm(forms.ModelForm):\n    class Meta:\n        model = PersonalInfo\n        fields = ['cedula', 'telefono', 'nombre', 'apellido', 'email']\n        labels = {\n            'cedula': 'Cédula',\n            'telefono': 'Teléfono',\n            'nombre': 'Nombre',\n            'apellido': 'Apellido',\n            'email': 'Correo Electrónico',",
+        "detail": "cardiaco_vaca.temp_car.forms",
+        "documentation": {}
+    },
+    {
+        "label": "EditPersonalInfoForm",
+        "kind": 6,
+        "importPath": "cardiaco_vaca.temp_car.forms",
+        "description": "cardiaco_vaca.temp_car.forms",
+        "peekOfCode": "class EditPersonalInfoForm(forms.ModelForm):\n    class Meta:\n        model = PersonalInfo\n        fields = ['cedula', 'telefono', 'nombre', 'apellido', 'email']\nclass EditUserForm(forms.ModelForm):\n    is_staff = forms.BooleanField(required=False)\n    class Meta:\n        model = User\n        fields = ['is_staff']\nclass CustomPasswordResetForm(PasswordResetForm):",
+        "detail": "cardiaco_vaca.temp_car.forms",
+        "documentation": {}
+    },
+    {
+        "label": "EditUserForm",
+        "kind": 6,
+        "importPath": "cardiaco_vaca.temp_car.forms",
+        "description": "cardiaco_vaca.temp_car.forms",
+        "peekOfCode": "class EditUserForm(forms.ModelForm):\n    is_staff = forms.BooleanField(required=False)\n    class Meta:\n        model = User\n        fields = ['is_staff']\nclass CustomPasswordResetForm(PasswordResetForm):\n    def clean_email(self):\n        email = self.cleaned_data['email']\n        if not User.objects.filter(email=email).exists():\n            raise forms.ValidationError('No hay ninguna cuenta asociada a este correo electrónico')",
+        "detail": "cardiaco_vaca.temp_car.forms",
+        "documentation": {}
+    },
+    {
+        "label": "CustomPasswordResetForm",
+        "kind": 6,
+        "importPath": "cardiaco_vaca.temp_car.forms",
+        "description": "cardiaco_vaca.temp_car.forms",
+        "peekOfCode": "class CustomPasswordResetForm(PasswordResetForm):\n    def clean_email(self):\n        email = self.cleaned_data['email']\n        if not User.objects.filter(email=email).exists():\n            raise forms.ValidationError('No hay ninguna cuenta asociada a este correo electrónico')\n        return email",
+        "detail": "cardiaco_vaca.temp_car.forms",
+        "documentation": {}
+    },
+    {
+        "label": "PersonalInfo",
+        "kind": 6,
+        "importPath": "cardiaco_vaca.temp_car.models",
+        "description": "cardiaco_vaca.temp_car.models",
+        "peekOfCode": "class PersonalInfo(models.Model):\n    cedula = models.CharField(max_length=15, blank=True, null=True, unique=True)\n    telefono = models.CharField(max_length=15, blank=True, null=True)\n    nombre = models.CharField(max_length=50, blank=True, null=True)\n    apellido = models.CharField(max_length=50, blank=True, null=True)\n    email = models.EmailField(max_length=50, blank=True, null=True, unique=True)\n    def __str__(self):\n        return f\"{self.nombre} {self.apellido}\"\nclass Temperatura(models.Model):\n    id_Temperatura = models.AutoField(primary_key=True)",
+        "detail": "cardiaco_vaca.temp_car.models",
+        "documentation": {}
+    },
+    {
+        "label": "Temperatura",
+        "kind": 6,
+        "importPath": "cardiaco_vaca.temp_car.models",
+        "description": "cardiaco_vaca.temp_car.models",
+        "peekOfCode": "class Temperatura(models.Model):\n    id_Temperatura = models.AutoField(primary_key=True)\n    valor = models.IntegerField()\n    def __str__(self):\n        return str(self.valor)\nclass Pulsaciones(models.Model):\n    id_Pulsaciones = models.AutoField(primary_key=True)\n    valor = models.IntegerField()\n    def __str__(self):\n        return str(self.valor)",
+        "detail": "cardiaco_vaca.temp_car.models",
+        "documentation": {}
+    },
+    {
+        "label": "Pulsaciones",
+        "kind": 6,
+        "importPath": "cardiaco_vaca.temp_car.models",
+        "description": "cardiaco_vaca.temp_car.models",
+        "peekOfCode": "class Pulsaciones(models.Model):\n    id_Pulsaciones = models.AutoField(primary_key=True)\n    valor = models.IntegerField()\n    def __str__(self):\n        return str(self.valor)\nclass Bovinos(models.Model):\n    id_Bovinos = models.AutoField(primary_key=True)\n    idCollar = models.IntegerField(unique=True)\n    macCollar = models.CharField(max_length=100, blank=True, null=True, unique=True)\n    nombre = models.CharField(max_length=100)",
+        "detail": "cardiaco_vaca.temp_car.models",
+        "documentation": {}
+    },
+    {
+        "label": "Bovinos",
+        "kind": 6,
+        "importPath": "cardiaco_vaca.temp_car.models",
+        "description": "cardiaco_vaca.temp_car.models",
+        "peekOfCode": "class Bovinos(models.Model):\n    id_Bovinos = models.AutoField(primary_key=True)\n    idCollar = models.IntegerField(unique=True)\n    macCollar = models.CharField(max_length=100, blank=True, null=True, unique=True)\n    nombre = models.CharField(max_length=100)\n    fecha_registro = models.DateField()\n    def __str__(self):\n        return self.nombre\nclass Lectura(models.Model):\n    id_Lectura = models.AutoField(primary_key=True)",
+        "detail": "cardiaco_vaca.temp_car.models",
+        "documentation": {}
+    },
+    {
+        "label": "Lectura",
+        "kind": 6,
+        "importPath": "cardiaco_vaca.temp_car.models",
+        "description": "cardiaco_vaca.temp_car.models",
+        "peekOfCode": "class Lectura(models.Model):\n    id_Lectura = models.AutoField(primary_key=True)\n    id_Temperatura = models.ForeignKey(Temperatura, on_delete=models.CASCADE)\n    id_Pulsaciones = models.ForeignKey(Pulsaciones, on_delete=models.CASCADE)\n    fecha_lectura = models.DateField(default=getHours.getDate)\n    hora_lectura = models.TimeField(default=getHours.getTime)\n    id_Bovino = models.ForeignKey(Bovinos, on_delete=models.CASCADE)\n    def __str__(self):\n        return f\"{self.id_Lectura} - {self.id_Bovino.nombre} - {self.fecha_lectura} - {self.hora_lectura}\"\nclass ControlMonitoreo(models.Model):",
+        "detail": "cardiaco_vaca.temp_car.models",
+        "documentation": {}
+    },
+    {
+        "label": "ControlMonitoreo",
+        "kind": 6,
+        "importPath": "cardiaco_vaca.temp_car.models",
+        "description": "cardiaco_vaca.temp_car.models",
+        "peekOfCode": "class ControlMonitoreo(models.Model):\n    id_Control = models.AutoField(primary_key=True)\n    id_Lectura = models.ForeignKey(Lectura, on_delete=models.CASCADE)\n    id_User = models.ForeignKey(User, on_delete=models.CASCADE)\n    fecha_lectura = models.DateField(default=getHours.getDate)\n    hora_lectura = models.TimeField(default=getHours.getTime)\n    def __str__(self):\n        return f\"{self.id_Control} - {self.id_Lectura.id_Bovino.nombre} - {self.fecha_lectura} - {self.hora_lectura}\"",
+        "detail": "cardiaco_vaca.temp_car.models",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.temp_car.urls",
+        "description": "cardiaco_vaca.temp_car.urls",
+        "peekOfCode": "urlpatterns = [\n    ##################################\n    #Rutas de Plataforma Web\n    ##################################\n    #Ruta para el Inicio de Sesion\n    path('', user_login,name='login'),\n    #Ruta para el Cierre de Sesion\n    path('', user_logout, name='salir'),\n    #Rutas de gestion de datos\n    path('gestion/', listar_usuario, name='gestion'),    ",
+        "detail": "cardiaco_vaca.temp_car.urls",
+        "documentation": {}
+    },
+    {
+        "label": "handler404",
+        "kind": 5,
+        "importPath": "cardiaco_vaca.temp_car.urls",
+        "description": "cardiaco_vaca.temp_car.urls",
+        "peekOfCode": "handler404 = 'temp_car.views.error_404_view'",
+        "detail": "cardiaco_vaca.temp_car.urls",
+        "documentation": {}
+    },
+    {
+        "label": "LoginView1",
+        "kind": 6,
+        "importPath": "cardiaco_vaca.temp_car.views",
+        "description": "cardiaco_vaca.temp_car.views",
+        "peekOfCode": "class LoginView1(APIView):\n    @csrf_exempt\n    def post(self, request, *args, **kwargs):\n        username = request.data.get('username')\n        password = request.data.get('password')\n        user = authenticate(request, username=username, password=password)\n        print(\"Usuario: \", user)\n        personaInfo = PersonalInfo.objects.filter(email=username).first()\n        print(\"Persona: \", personaInfo)\n        # Dividir el nombre y tomar solo la primera parte",
+        "detail": "cardiaco_vaca.temp_car.views",
+        "documentation": {}
+    },
+    {
+        "label": "prueba",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.views",
+        "description": "cardiaco_vaca.temp_car.views",
+        "peekOfCode": "def prueba(request):\n    return render(request, 'appMonitor/dashboard/temperature.html')\ndef error_404_view(request, exception):\n    return render(request, '404.html', status=404)\n############Dashboard################\n# Dashboard Monitoreo Actual toda la logica esta dentro \n@login_required\ndef monitoreo_actual(request):\n    collares = Bovinos.objects.all()  # Ejemplo de obtener todos los collares\n    context = {",
+        "detail": "cardiaco_vaca.temp_car.views",
+        "documentation": {}
+    },
+    {
+        "label": "error_404_view",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.views",
+        "description": "cardiaco_vaca.temp_car.views",
+        "peekOfCode": "def error_404_view(request, exception):\n    return render(request, '404.html', status=404)\n############Dashboard################\n# Dashboard Monitoreo Actual toda la logica esta dentro \n@login_required\ndef monitoreo_actual(request):\n    collares = Bovinos.objects.all()  # Ejemplo de obtener todos los collares\n    context = {\n        'collares': collares,\n        'idCollar': 1,  # Ejemplo de pasar un id de collar específico",
+        "detail": "cardiaco_vaca.temp_car.views",
+        "documentation": {}
+    },
+    {
+        "label": "monitoreo_actual",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.views",
+        "description": "cardiaco_vaca.temp_car.views",
+        "peekOfCode": "def monitoreo_actual(request):\n    collares = Bovinos.objects.all()  # Ejemplo de obtener todos los collares\n    context = {\n        'collares': collares,\n        'idCollar': 1,  # Ejemplo de pasar un id de collar específico\n    }\n    return render(request, 'appMonitor/dashboard/monitor.html', context)\ndef dashBoardData(request, id_collar=None):\n    # Validar si se proporcionó un id_collar\n    if id_collar is None:",
+        "detail": "cardiaco_vaca.temp_car.views",
+        "documentation": {}
+    },
+    {
+        "label": "dashBoardData",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.views",
+        "description": "cardiaco_vaca.temp_car.views",
+        "peekOfCode": "def dashBoardData(request, id_collar=None):\n    # Validar si se proporcionó un id_collar\n    if id_collar is None:\n        return JsonResponse({'error': 'Se requiere un id_collar'}, status=400)\n    # Obtener el bovino asociado al id_collar\n    try:\n        bovino = Bovinos.objects.get(idCollar=id_collar)\n    except Bovinos.DoesNotExist:\n        return JsonResponse({'error': 'Collar no encontrado'}, status=404)\n    # Obtener el último registro de lectura del bovino",
+        "detail": "cardiaco_vaca.temp_car.views",
+        "documentation": {}
+    },
+    {
+        "label": "ultimoRegistro",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.views",
+        "description": "cardiaco_vaca.temp_car.views",
+        "peekOfCode": "def ultimoRegistro(request, collar_id):\n    print(\"Llegue a la vista el collar id es: \", collar_id)\n    # Filtrar por collar_id y ordenar por fecha y hora para obtener el último\n    bovino = Bovinos.objects.filter(idCollar=collar_id).first()\n    if bovino is  None:\n        return JsonResponse({'error': 'No hay datos disponibles para el collar_id proporcionado'}, status=404)\n    datos = Lectura.objects.filter(id_Bovino=bovino).order_by('-fecha_lectura', '-hora_lectura').first()\n    if datos is not None:\n        reporte = {\n            'fecha_lectura': datos.fecha_lectura.strftime('%Y-%m-%d'),",
+        "detail": "cardiaco_vaca.temp_car.views",
+        "documentation": {}
+    },
+    {
+        "label": "reportes",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.views",
+        "description": "cardiaco_vaca.temp_car.views",
+        "peekOfCode": "def reportes(request):\n    # Obtener la página actual de la URL, por ejemplo, \"/reportes/?page=2\"\n    page = request.GET.get('page', 1)\n    # Obtener la fecha de búsqueda desde el formulario\n    fecha_busqueda = request.GET.get('fecha_busqueda')\n    # Obtener todos los reportes (o filtrar según tus necesidades)\n    reportes_list = Lectura.objects.all().order_by('-fecha_lectura', '-hora_lectura')\n    # Filtrar los reportes por fecha si se proporciona una fecha de búsqueda\n    if fecha_busqueda:\n        try:",
+        "detail": "cardiaco_vaca.temp_car.views",
+        "documentation": {}
+    },
+    {
+        "label": "reporte_pdf",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.views",
+        "description": "cardiaco_vaca.temp_car.views",
+        "peekOfCode": "def reporte_pdf(request):\n    fecha_busqueda = request.GET.get('fecha_busqueda')\n    reportes = Lectura.objects.all()\n    if fecha_busqueda:\n        try:\n            fecha_busqueda = datetime.strptime(fecha_busqueda, '%Y-%m-%d').date()\n            reportes = reportes.filter(fecha_lectura__date=fecha_busqueda)\n        except ValueError:\n            # Manejo de error si la fecha ingresada no es válida\n            return HttpResponse(\"Fecha de búsqueda inválida.\", status=400)",
+        "detail": "cardiaco_vaca.temp_car.views",
+        "documentation": {}
+    },
+    {
+        "label": "render_to_pdf",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.views",
+        "description": "cardiaco_vaca.temp_car.views",
+        "peekOfCode": "def render_to_pdf(html_content, context_dict={}):\n    header_html = \"\"\"\n<table style=\"width: 100%; border-collapse: collapse;\">\n    <tr>\n        <td style=\"padding: 10px;\">\n            <img src=\"./temp_car/static/assets/img/logounl.png\" alt=\"Left Logo\" style=\"width: 195px; height: auto; margin-right: 10px;\">\n        </td>\n        <td style=\"padding: 10px; vertical-align: top; text-align: right;\">\n            <img src=\"./temp_car/static/assets/img/logoComputacion.png\" alt=\"Right Logo\" style=\"width: 100px; height: auto; margin-left: 10px;\">\n        </td>",
+        "detail": "cardiaco_vaca.temp_car.views",
+        "documentation": {}
+    },
+    {
+        "label": "temperatura",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.views",
+        "description": "cardiaco_vaca.temp_car.views",
+        "peekOfCode": "def temperatura(request):\n    try:\n        page = request.GET.get('page', 1)\n        reportes_list = Lectura.objects.all().order_by('-fecha_lectura', '-hora_lectura')\n        paginator = Paginator(reportes_list, 10)\n        reportes = paginator.get_page(page)\n        collares = Bovinos.objects.all()\n    except PageNotAnInteger:\n        reportes = paginator.get_page(1)\n    except EmptyPage:",
+        "detail": "cardiaco_vaca.temp_car.views",
+        "documentation": {}
+    },
+    {
+        "label": "frecuencia",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.views",
+        "description": "cardiaco_vaca.temp_car.views",
+        "peekOfCode": "def frecuencia(request):\n    try:\n        # Obtener la página actual desde la solicitud GET\n        page = request.GET.get('page', 1)\n        reportes_list = Lectura.objects.all().order_by('-fecha_lectura', '-hora_lectura')\n        paginator = Paginator(reportes_list, 10)\n        reportes = paginator.page(page)\n        collares = Bovinos.objects.all()\n    except PageNotAnInteger:\n        reportes = paginator.page(1)",
+        "detail": "cardiaco_vaca.temp_car.views",
+        "documentation": {}
+    },
+    {
+        "label": "reporte_por_id",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.views",
+        "description": "cardiaco_vaca.temp_car.views",
+        "peekOfCode": "def reporte_por_id(request):\n    # Obtener el último dato registrado para el id proporcionado\n    bovino = Bovinos.objects.filter(idCollar=request.POST.get('sensor')).first()\n    user = User.objects.filter(username=request.POST.get('username')).first()\n    dato = Lectura.objects.filter(id_Bovino=bovino).order_by('-fecha_lectura', '-hora_lectura').first()\n    if dato:\n        fecha_creacion = dato.fecha_lectura.strftime('%Y-%m-%d') + ' ' + dato.hora_lectura.strftime('%H:%M:%S')\n        registro = False\n        # Verificar condiciones para la mañana\n        if checkingMorning(bovino) and checkHoursMorning(dato.hora_lectura) and checkDate(dato.fecha_lectura):",
+        "detail": "cardiaco_vaca.temp_car.views",
+        "documentation": {}
+    },
+    {
+        "label": "apiRegister",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.views",
+        "description": "cardiaco_vaca.temp_car.views",
+        "peekOfCode": "def apiRegister(request):\n    if request.method == 'POST':\n        form = PersonalInfoForm(request.POST)\n        if form.is_valid():\n            #Ahora se crea el usuario con el modelo CustomUserManager\n            user = get_user_model().objects.create_user(\n                username=form.cleaned_data['email'],\n                email=form.cleaned_data['email'],\n                password=form.cleaned_data['cedula'],\n                first_name=form.cleaned_data['nombre'],",
+        "detail": "cardiaco_vaca.temp_car.views",
+        "documentation": {}
+    },
+    {
+        "label": "apiList",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.views",
+        "description": "cardiaco_vaca.temp_car.views",
+        "peekOfCode": "def apiList(request):\n    usuarios = {}\n    usuario_queryset = User.objects.all()\n    profile_queryset = PersonalInfo.objects.all()\n    for user in usuario_queryset:\n        #sino esta en el staff no se muestra\n        if  user.is_staff == True:\n            continue\n        else:\n            profile = profile_queryset.filter(email=user.email).first()",
+        "detail": "cardiaco_vaca.temp_car.views",
+        "documentation": {}
+    },
+    {
+        "label": "apiEdit",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.views",
+        "description": "cardiaco_vaca.temp_car.views",
+        "peekOfCode": "def apiEdit(request, user_id):\n    user = get_object_or_404(User, id=user_id)\n    print(user)\n    profile = get_object_or_404(PersonalInfo, email=user.email)\n    print(profile)\n    if request.method == 'POST':\n        form = PersonalInfoForm(request.POST, instance=profile)\n        if form.is_valid():\n            form.save()\n            user.email = form.cleaned_data['email']",
+        "detail": "cardiaco_vaca.temp_car.views",
+        "documentation": {}
+    },
+    {
+        "label": "lecturaDatosArduino",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.temp_car.views",
+        "description": "cardiaco_vaca.temp_car.views",
+        "peekOfCode": "def lecturaDatosArduino(request):\n    print(\"Entro al 1\")\n    body_unicode = request.body.decode('utf-8')\n    lecturaDecoded = json.loads(body_unicode)\n    if request.method == 'POST':\n        print(\"Entro al 2\")\n        collar_id = lecturaDecoded.get('collar_id', None)\n        nombre_vaca = lecturaDecoded.get('nombre_vaca', None)\n        mac_collar = lecturaDecoded.get('mac_collar', None)\n        temperatura = lecturaDecoded.get('temperatura', None)",
+        "detail": "cardiaco_vaca.temp_car.views",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "cardiaco_vaca.manage",
+        "description": "cardiaco_vaca.manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'cardiaco_vaca.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "cardiaco_vaca.manage",
+        "documentation": {}
+    }
+]
