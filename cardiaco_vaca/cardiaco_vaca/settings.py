@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 from django.urls import reverse_lazy
 from pathlib import Path
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,9 +27,10 @@ SECRET_KEY = 'django-insecure-gse7w_va40r(70@*(*6x*1th%+1gzr53sdrk+@y&=w6idwm*g@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['52.186.171.36', 'pmonitunl.vercel.app', 'localhost']
+ALLOWED_HOSTS = [config('IP_ADDRESS'), config('URL_DOMAIN'), 'localhost']
 USE_X_FORWARDED_HOST = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
 DEFAULT_DOMAIN = "pmonitunl.vercel.app"
 
 LOGIN_REDIRECT_URL = ('dashboard_redirect')

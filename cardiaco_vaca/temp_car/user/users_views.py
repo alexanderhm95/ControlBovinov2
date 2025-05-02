@@ -15,6 +15,7 @@ from django.views import View
 from django.conf import settings
 from temp_car.models import *
 from temp_car.forms import *
+from decouple import config
 
 
 from django.contrib.auth.forms import PasswordResetForm
@@ -24,7 +25,7 @@ def send_custom_password_reset(request):
     if form.is_valid():
         form.save(
             request=request,
-            domain_override="pmonitunl.vercel.app",  # Aquí fuerzas el dominio correcto
+            domain_override=config('URL_DOMAIN', default='localhost:8000')
             use_https=True,  # Si usas HTTPS en Vercel
             email_template_name='registration/password_reset_email.html',
         )
